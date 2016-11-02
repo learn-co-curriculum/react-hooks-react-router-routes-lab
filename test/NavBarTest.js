@@ -12,11 +12,6 @@ describe('<NavBar />', () => {
     //     const wrapper = shallow(<NavBar />)
     // })
 
-    it('should have .navbar class', () => {
-        const wrapper = shallow(<NavBar />)
-        expect(wrapper.hasClass('navbar')).toBe(true)
-    })
-
     it('should render a <ul />', () => {
         const wrapper = shallow(<NavBar />)
         expect(wrapper.children().first().type()).toBe('ul')
@@ -42,6 +37,15 @@ describe('<NavBar />', () => {
         const listItems = wrapper.children().first().children()
         listItems.forEach((li, i) => {
             expect(li.children().first().children().first().text()).toBe(linkNames[i])
+        })
+    })
+
+    it('should contain the right path in the <Links /> href', () => {
+        const wrapper = shallow(<NavBar />)
+        const linkNames = ['/', '/movies', '/directors', '/actors']
+        const links = wrapper.children().first().children()
+        links.forEach((link, i) => {
+            expect(link.children().first().props().to).toBe(linkNames[i])
         })
     })
 })
