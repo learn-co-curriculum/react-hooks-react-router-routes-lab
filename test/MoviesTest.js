@@ -3,7 +3,7 @@ import sinon from 'sinon'
 import { shallow } from 'enzyme'
 
 // components
-import Movies from '../src/Movies'
+import Movies from '../src/components/Movies'
 
 // data
 import { movies } from '../src/data'

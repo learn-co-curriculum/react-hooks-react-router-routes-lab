@@ -3,8 +3,8 @@ import sinon from 'sinon'
 import { shallow } from 'enzyme'
 
 // Components
-import App from '../src/App'
-import NavBar from '../src/NavBar'
+import App from '../src/components/App'
+import NavBar from '../src/components/NavBar'
 
 
 describe('<App />', () => {

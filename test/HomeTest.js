@@ -3,7 +3,7 @@ import sinon from 'sinon'
 import { shallow } from 'enzyme'
 
 // components
-import Home from '../src/Home'
+import Home from '../src/components/Home'
 
 
 describe('<Home />', () => {

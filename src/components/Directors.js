@@ -1,5 +1,5 @@
 import React from 'react'
-import { directors } from './data'
+import { directors } from '../data'
 
 const Directors = () => {
     return (

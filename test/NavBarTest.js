@@ -3,7 +3,7 @@ import sinon from 'sinon'
 import { shallow } from 'enzyme'
 
 // Components
-import NavBar from '../src/NavBar'
+import NavBar from '../src/components/NavBar'
 import { Link } from 'react-router'
 
 
