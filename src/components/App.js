@@ -4,9 +4,8 @@ import NavBar from './NavBar'
 
 const App = (props) => {
     return (
-        <div className="app">
-            <NavBar />
-            {props.children}
+        <div>
+            {/* code goes here */}
         </div>
     )
 }
