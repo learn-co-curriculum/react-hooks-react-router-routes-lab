@@ -2,10 +2,13 @@ import React from 'react'
 
 import NavBar from './NavBar'
 
-const App = () => {
+const App = (props) => {
     return (
         <div className="app">
             <NavBar />
+            <div>
+                {props.children}
+            </div>
         </div>
     )
 }
