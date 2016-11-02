@@ -4,6 +4,12 @@
 
 In this lab, you will create a simple Client-Side routing application with React Router.
 
+## Objectives
+
+* Practice building an application with React Router
+* Access Routes using a Navbar with matched routes
+* Visit different "views" in the application by accessing different routes
+
 ## React Router App
 
 In this lab we are going to build out an application that has routes for a Home Page, Actors Page, Movies Page and Directors Page. Our goal is to provide routes and links for these 4 pages.
