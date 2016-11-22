@@ -2,10 +2,10 @@ import React from 'react'
 
 import NavBar from './NavBar'
 
-const App = () => {
+const App = (props) => {
     return (
-        <div className="app">
-            <h1>App</h1>
+        <div>
+            {/* code goes here */}
         </div>
     )
 }

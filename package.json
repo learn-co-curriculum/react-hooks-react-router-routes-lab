@@ -10,7 +10,7 @@
   "scripts": {
     "debug": "node-debug --hidden node_modules _mocha --watch",
     "debug-ide": "./bin/debug-ide",
-    "test": "mocha -R mocha-multi --reporter-options nyan=-,json=.results.json",
+    "test": "mocha -R mocha-multi --reporter spec --reporter-options  nyan=-,json=.results.json",
     "test:watch": "npm run test -- --watch",
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
   },
