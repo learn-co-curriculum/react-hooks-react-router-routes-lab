@@ -8,6 +8,7 @@ const App = (props) => {
         <div className="app">
             {/* code goes here */}
         </div>
+      </div>
     )
 }
 
