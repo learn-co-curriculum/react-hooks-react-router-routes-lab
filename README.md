@@ -44,7 +44,7 @@ All of the file and module imports are done for you, so you just need to focus o
 
 #### `Index.js`
 
-Our `Index.js` file is already completed for us. It loads in the `Router` and `hashHistory` from __React Router__. You will notice that it is loading in a file called `./Routes` and then passing in `routes={Routes}` inside of the `<Route />` component. This file is where we will define our routes for the application.
+Our `Index.js` file is already completed for us. It loads in the `Router` and `browserHistory` from __React Router__. You will notice that it is loading in a file called `./Routes` and then passing in `routes={Routes}` inside of the `<Route />` component. This file is where we will define our routes for the application.
 
 #### `Routes.js`
 

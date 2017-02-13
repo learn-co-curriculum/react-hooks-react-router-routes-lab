@@ -8,10 +8,6 @@ import { Link } from 'react-router'
 
 
 describe('<NavBar />', () => {
-    // beforeEach(() => {
-    //     const wrapper = shallow(<NavBar />)
-    // })
-
     it('should render a <ul />', () => {
         const wrapper = shallow(<NavBar />)
         expect(wrapper.children().first().type()).toBe('ul')
