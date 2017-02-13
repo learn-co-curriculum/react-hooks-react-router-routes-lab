@@ -44,13 +44,7 @@ All of the file and module imports are done for you, so you just need to focus o
 
 #### `Index.js`
 
-Our `Index.js` file is already completed for us. It loads in the `Router` and `browserHistory` from __React Router__. You will notice that it is loading in a file called `./Routes` and then passing in `routes={Routes}` inside of the `<Route />` component. This file is where we will define our routes for the application.
-
-#### `Routes.js`
-
-Inside of the `Routes.js` you need to define our `root` path, `<IndexRoute />`, and the routes for `/movies, /actors, and /directors`.
-
-You need to specify the different components that need to load for the routes as well.
+Our `Index.js` file is partially completed for us. It loads in the `Router` and `browserHistory` from __React Router__. Inside the react-dom render method, you still need to place the Routes component as well the corresponding Route components.
 
 #### `data.js`
 
@@ -58,7 +52,7 @@ This file contains seed data for __Actors, Movies, and Directors__
 
 #### `<App />`
 
-This component should render our `<NavBar />` and display the content of our individual route components below
+This component should render our `<NavBar />` and display the content of our individual route components below.  When a user visits the root url, he should see the App component.
 
 #### `<NavBar />`
 
