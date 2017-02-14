@@ -1,20 +1,20 @@
-import React from 'react'
-import { render } from 'react-dom'
+import React from 'react';
+import { render } from 'react-dom';
+import { Router, Route, browserHistory } from 'react-router';
 
-import { Router, browserHistory } from 'react-router'
-import Actors from './components/Actors'
-import App from './components/App'
-import Directors from './components/Directors'
-import Home from './components/Home'
-import Movies from './components/Movies'
+// routes
+import routes from './routes';
 
-
-render(
-    (<Router history={browserHistory} >
-      <Route path="/" component={App} />
+/**
+  TODO: move all Route tags to ./route.js
+*/
+render (
+  <Router history={browserHistory}>
+    <Route path="/" component={App} >
       <Route path="/movies" component={Movies} />
       <Route path="/actors" component={Actors} />
       <Route path="/directors" component={Directors} />
-    </Router>),
-    document.getElementById('container')
-)
+    </Route>
+  </Router>,
+  document.getElementById('root')
+);
