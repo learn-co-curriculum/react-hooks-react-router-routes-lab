@@ -6,7 +6,7 @@ indent_style = space
 insert_final_newline = true
 
 [*{.java,.py}]
-indent_size = 4
+indent_size = 2
 
 [*.{js,json,rb}]
 charset = utf-8
