@@ -1,6 +1,7 @@
 import React from 'react'
 import sinon from 'sinon'
-import { shallow } from 'enzyme'
+import { mount, shallow } from 'enzyme'
+import pry from 'pryjs';
 
 // components
 import Actors from '../src/components/Actors'
@@ -10,12 +11,8 @@ import { actors } from '../src/data'
 
 
 describe('<Actors />', () => {
-    it('should render a <div />', () => {
-        const wrapper = shallow(<Actors />)
-        expect(wrapper.type()).toBe('div')
-    })
 
-    it('should render one <h1 /> first, inside of the <div />', () => {
+    it('should render one <h1 />, inside of a <div />', () => {
         const wrapper = shallow(<Actors />)
         expect(wrapper.children().first().type()).toBe('h1')
     })
@@ -30,13 +27,14 @@ describe('<Actors />', () => {
         expect(wrapper.children().find('div').length).toBe(4)
     })
 
-    it("should render the right content for each actor", () => {
-        const wrapper = shallow(<Actors />)
+    it("should render the right content for each actor with a className of 'actor'", () => {
+        const wrapper = mount(<Actors />);
         const actorContainers = wrapper.children().find('div')
-        actorContainers.forEach((actor, i) => {
-            expect(actor.text()).toContain(actors[i].name)
+        expect(actorContainers.length).toBe(4);
+        actorContainers.forEach((node, i) => {
+            expect(node.html()).toContain(actors[i].name)
             actors[i].movies.forEach((movie) => {
-                expect(actor.text()).toContain(movie)
+                expect(node.html()).toContain(movie)
             })
         })
     })
