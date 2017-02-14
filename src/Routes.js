@@ -1,17 +1,13 @@
-import React from 'react'
-import { Router, Route, hashHistory, IndexRoute } from 'react-router'
+import React from 'react';
+import { Route, IndexRoute } from 'react-router';
 
-import Actors from './components/Actors'
-import App from './components/App'
-import Directors from './components/Directors'
-import Home from './components/Home'
-import Movies from './components/Movies'
-
-const Routes = (
-    <Route path="/" component={App}>
-        {/* routes go here */}
-    </Route>
-)
+import Actors from './components/Actors';
+import App from './components/App';
+import Directors from './components/Directors';
+import Home from './components/Home';
+import Movies from './components/Movies';
 
 
-module.exports = Routes
+export default (
+  /* add routes here */
+);

@@ -2,12 +2,12 @@
 
 ## Overview
 
-In this lab, you will create a simple Client-Side routing application with React Router.
+In this lab, you will create a simple Client-Side routing application with __React Router__.
 
 ## Objectives
 
-* Practice building an application with React Router
-* Access Routes using a Navbar with matched routes
+* Practice building an application with __React Router__
+* Access routes using a Navbar with matched routes
 * Visit different "views" in the application by accessing different routes
 
 ## React Router App
@@ -29,7 +29,7 @@ Our `src` folder contains the following:
 ```
 src/
 ├── data.js
-├── Index.js
+├── index.js
 ├── routes.js
 └── components/
     ├── Actors.js
@@ -44,7 +44,7 @@ All of the file and module imports are done for you, so you just need to focus o
 
 #### `Index.js`
 
-Our `Index.js` file is partially completed for us. It loads in the `Router` and `browserHistory` from __React Router__. Inside the react-dom render method, you still need to place the Routes component as well the corresponding Route components.
+Our `Index.js` file is partially completed for us. It loads in the `Router` and `browserHistory` from __React Router__. You will need to move the route, inside the react-dom render method, to the __./routes.js__ file. Then you need pass the routes as props to the __Router__ (i.e. `<Router history={browserHistory} routes={routes}>`).
 
 #### `data.js`
 
@@ -52,7 +52,7 @@ This file contains seed data for __Actors, Movies, and Directors__
 
 #### `<App />`
 
-This component should render our `<NavBar />` and display the content of our individual route components below.  When a user visits the root url, he should see the App component.
+This component should render our `<NavBar />` and display the content of our individual route components below. When a user visits the root url, he should see the App component.
 
 #### `<NavBar />`
 
