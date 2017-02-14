@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, browserHistory } from 'react-router';
+import { Router, browserHistory } from 'react-router';
 
 // routes
 import routes from './routes';
@@ -11,6 +11,7 @@ import routes from './routes';
 render (
   <Router history={browserHistory}>
     <Route path="/" component={App} >
+      <IndexRoute component={Home} />
       <Route path="/movies" component={Movies} />
       <Route path="/actors" component={Actors} />
       <Route path="/directors" component={Directors} />
