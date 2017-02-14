@@ -10,6 +10,6 @@ import NavBar from '../src/components/NavBar';
 describe('<App />', () => {
   it('should contain a <NavBar /> component', () => {
     const wrapper = shallow(<App />);
-    expect(wrapper.find(NavBar).length).to.be(1);
+    expect(wrapper.find(NavBar).length).to.equal(1);
   });
 });
