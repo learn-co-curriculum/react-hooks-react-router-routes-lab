@@ -44,7 +44,7 @@ All of the file and module imports are done for you, so you just need to focus o
 
 #### `Index.js`
 
-Our `Index.js` file is partially completed for us. It loads in the `Router` and `browserHistory` from __React Router__. You will need to move the route, inside the react-dom render method, to the __./routes.js__ file. Then you need pass the routes as props to the __Router__ (i.e. `<Router history={browserHistory} routes={routes}>`).
+Our `index.js` file is partially completed for us. It loads in the `Router` and `browserHistory` from __React Router__. You will need to move the route, inside the react-dom render method, to the __./routes.js__ file. Then you need pass the routes as props to the __Router__ (i.e. `<Router history={browserHistory} routes={routes}>`).
 
 #### `data.js`
 
@@ -78,3 +78,5 @@ This component should render the text `Actors Page`, and make a new `<div />` fo
 
 [React Router](https://github.com/ReactTraining/react-router)
 [React Router Tutorial](https://github.com/reactjs/react-router-tutorial)
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/react-components-as-routes-lab'>React Components As Routes Lab</a> on Learn.co and start learning to code for free.</p>
