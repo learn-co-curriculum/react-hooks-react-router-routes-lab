@@ -54,7 +54,7 @@ This file contains seed data for __Actors, Movies, and Directors__
 
 #### `App`
 
-This component should render our `Navbar` and our __React Router__ `Route` components and display the content of our individual route components below. When a user visits the root url, they should see the Home component.
+This component should render our `Navbar` and 4 __React Router__ `Route` components with paths to __/, /movies, /directors, /actors__ and has a props of the corresponding component. When a user visits the root url, they should see the Home component.
 
 #### `Navbar`
 
