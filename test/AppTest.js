@@ -6,15 +6,11 @@ import { shallow } from 'enzyme';
 // Components
 import App from '../src/containers/App';
 
-describe('<App />', () => {
+describe('App', () => {
   let wrapper;
 
   beforeEach(() => {
     wrapper = shallow(<App />);
-  })
-
-  it('wraps the component in a div with className .app', () => {
-    expect(wrapper.find('.app').length).to.equal(1);
   })
 
   it('contains a <NavBar /> component', () => {
