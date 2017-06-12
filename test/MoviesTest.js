@@ -10,25 +10,25 @@ import Movies from '../src/components/Movies';
 import { movies } from '../src/data';
 
 
-describe('<Movies />', () => {
- 
+describe('Movies', () => {
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<Movies />);
+  })
   it('should render one <h1 /> first, inside of the <div />', () => {
-    const wrapper = shallow(<Movies />);
     expect(wrapper.children().first().type()).to.equal('h1');
   });
 
   it("should render 'Movies Page' inside of the <h1 />", () => {
-    const wrapper = shallow(<Movies />);
     expect(wrapper.children().first().text()).to.contain('Movies Page');
   });
 
   it("should render a <div /> for each movie", () => {
-    const wrapper = shallow(<Movies />);
     expect(wrapper.children().find('div').length).to.equal(3);
   });
 
   it("should render the right content for each movie", () => {
-    const wrapper = shallow(<Movies />);
     const movieContainers = wrapper.children().find('div');
     expect(movieContainers.length).to.equal(3);
     movieContainers.forEach((movie, i) => {

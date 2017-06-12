@@ -1,8 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
-  return (<div />);
+  return (
+    <div>
+      {/*{code here}*/}
+    </div>
+  );
 };
 
 export default NavBar;

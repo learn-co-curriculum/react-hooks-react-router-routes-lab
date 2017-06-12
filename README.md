@@ -30,10 +30,10 @@ Our `src` folder contains the following:
 src/
 ├── data.js
 ├── index.js
-├── routes.js
+|-- containers/
+|   |-- App.js
 └── components/
     ├── Actors.js
-    ├── App.js
     ├── Directors.js
     ├── Home.js
     ├── Movies.js
@@ -44,39 +44,41 @@ All of the file and module imports are done for you, so you just need to focus o
 
 #### `Index.js`
 
-Our `index.js` file is partially completed for us. It loads in the `Router` and `browserHistory` from __React Router__. You will need to move the route, inside the react-dom render method, to the __./routes.js__ file. Then you need pass the routes as props to the __Router__ (i.e. `<Router history={browserHistory} routes={routes}>`).
+Our `index.js` file is partially completed for us. It loads in the `BrowserRouter as Router` from __React Router__.
 
 #### `data.js`
 
 This file contains seed data for __Actors, Movies, and Directors__
 
-#### `<App />`
+## Component Info
 
-This component should render our `<NavBar />` and display the content of our individual route components below. When a user visits the root url, he should see the App component.
+#### `App`
 
-#### `<NavBar />`
+This component should render our `Navbar` and 4 __React Router__ `Route` components with paths to __/, /movies, /directors, /actors__ and has a props of the corresponding component. When a user visits the root url, they should see the Home component.
 
-This component needs to render an `<ul />` with links for __/, /movies, /directors, /actors__ <-- in this order(test checks for this).
+#### `Navbar`
 
-#### `<Home />`
+This component needs to render 4 `<NavLink>` components. They will be for __/, /movies, /directors, /actors__ <-- in this order(test checks for this).
+
+#### `Home`
 
 This component should render the text `Home Page`.
 
-#### `<Movies />`
+#### `Movies`
 
-This component should render the text `Movies Page`, and make a new `<div />` for each movie. The `<div />` should contain the movie's title, time and an `<ul />` for each genre.
+This component should render the text `Movies Page`, and make a new `<div>` for each movie. The `<div>` should contain the movie's title, time and an `<ul>` for each genre.
 
-#### `<Directors />`
+#### `Directors`
 
-This component should render the text `Directors Page`, and make a new `<div />` for each director. The `<div />` should contain the director's name and an `<ul />` for each of their movies.
+This component should render the text `Directors Page`, and make a new `<div>` for each director. The `<div>` should contain the director's name and an `<ul>` for each of their movies.
 
-#### `<Actors />`
+#### `Actors`
 
-This component should render the text `Actors Page`, and make a new `<div />` for each actor. The `<div />` should contain the actor's name and an `<ul />` for each of their movies.
+This component should render the text `Actors Page`, and make a new `<div>` for each actor. The `<div>` should contain the actor's name and an `<ul>` for each of their movies.
 
 ## Resources
 
 [React Router](https://github.com/ReactTraining/react-router)
-[React Router Tutorial](https://github.com/reactjs/react-router-tutorial)
+[React Router Tutorial](https://reacttraining.com/react-router/web/guides/quick-start)
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/react-components-as-routes-lab'>React Components As Routes Lab</a> on Learn.co and start learning to code for free.</p>
