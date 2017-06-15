@@ -48,13 +48,13 @@ Our `index.js` file is partially completed for us. It loads in the `BrowserRoute
 
 #### `data.js`
 
-This file contains seed data for __Actors, Movies, and Directors__
+This file contains seed data for __Actors, Movies & Directors__
 
 ## Component Info
 
 #### `App`
 
-This component should render our `Navbar` and 4 __React Router__ `Route` components with paths to __/, /movies, /directors, /actors__ and has a props of the corresponding component. When a user visits the root url, they should see the Home component.
+This component should render our `Navbar` and 4 __React Router__ `Route` components with paths to __/, /movies, /directors & /actors__ and has a props of the corresponding component. When a user visits the root url, they should see the Home component.
 
 #### `Navbar`
 
