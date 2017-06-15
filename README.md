@@ -21,7 +21,7 @@ This is what our app should look like when we are done with this lab:
 * [Directors Page](https://s3.amazonaws.com/learn-verified/react-router-lab-directors-page.png)
 * [Actors Page](https://s3.amazonaws.com/learn-verified/react-router-lab-actors-page.png)
 
-Lets work through this one component at a time
+Let's work through this one component at a time
 
 ### Components
 
