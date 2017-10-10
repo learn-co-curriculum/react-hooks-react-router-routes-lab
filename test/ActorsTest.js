@@ -1,7 +1,10 @@
 import React from 'react'
 import sinon from 'sinon'
 import { expect } from 'chai';
-import { shallow } from 'enzyme'
+import Enzyme, { shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+Enzyme.configure({ adapter: new Adapter() })
 
 // components
 import Actors from '../src/components/Actors'
@@ -11,11 +14,11 @@ import { actors } from '../src/data'
 
 
 describe('Actors', () => {
-  let wrapper; 
+  let wrapper;
 
   beforeEach(() => {
     wrapper = shallow(<Actors />);
-  }) 
+  })
 
   it('should render one <h1 />, inside of a <div />', () => {
     expect(wrapper.children().first().type()).to.equal('h1');

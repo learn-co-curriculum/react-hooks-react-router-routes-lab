@@ -1,7 +1,10 @@
 import React from 'react'
 import sinon from 'sinon'
 import { expect } from 'chai';
-import { shallow } from 'enzyme';
+import Enzyme, { shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+Enzyme.configure({ adapter: new Adapter() })
 
 // Components
 import NavBar from '../src/components/NavBar';
@@ -18,7 +21,7 @@ describe('NavBar', () => {
   })
 
   describe('navlinks', () => {
-     
+
      it('renders a Home <NavLink>', () => {
       const navLink = wrapper.findWhere(n => n.props().to === '/')
       expect(navLink.childAt(0).text()).to.equal('Home');
