@@ -1,13 +1,16 @@
 import React from 'react';
 import sinon from 'sinon';
 import { expect } from 'chai';
-import { shallow } from 'enzyme';
+import Enzyme, { shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+Enzyme.configure({ adapter: new Adapter() })
 
 import Home from '../src/components/Home';
 
 
 describe('Home', () => {
-  let wrapper; 
+  let wrapper;
 
   beforeEach(() => {
     wrapper = shallow(<Home />);
