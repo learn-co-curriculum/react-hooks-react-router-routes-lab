@@ -2,7 +2,8 @@
 
 ## Overview
 
-In this lab, you will create a simple Client-Side routing application with __React Router__.
+In this lab, you will create a simple Client-Side routing application with
+__React Router__.
 
 ## Objectives
 
@@ -12,7 +13,9 @@ In this lab, you will create a simple Client-Side routing application with __Rea
 
 ## React Router App
 
-In this lab we are going to build out an application that has routes for a Home Page, Actors Page, Movies Page and Directors Page. Our goal is to provide routes and links for these 4 pages.
+In this lab we are going to build out an application that has routes for a Home
+Page, Actors Page, Movies Page and Directors Page. Our goal is to provide routes
+and links for these 4 pages.
 
 This is what our app should look like when we are done with this lab:
 
@@ -40,11 +43,12 @@ src/
     └── NavBar.js
 ```
 
-All of the file and module imports are done for you, so you just need to focus on the JSX for these components.
+All of the file and module imports are done for you, so you just need to focus
+on the JSX for these components.
 
 #### `Index.js`
 
-Our `index.js` file is partially completed for us. It loads in the `BrowserRouter as Router` from __React Router__.
+Our `index.js` file is completed for us. It loads App as the top level component.
 
 #### `data.js`
 
@@ -54,11 +58,16 @@ This file contains seed data for __Actors, Movies & Directors__
 
 #### `App`
 
-This component should render our `Navbar` and 4 __React Router__ `Route` components with paths to __/, /movies, /directors & /actors__ and has a props of the corresponding component. When a user visits the root url, they should see the Home component.
+This component already contains a `Router` wrapper where we'll include our
+particular routes. App should render our `Navbar` and 4 __React Router__ `Route`
+components with paths to __/, /movies, /directors & /actors__ and has a props of
+the corresponding component. When a user visits the root url, they should see
+the Home component.
 
 #### `Navbar`
 
-This component needs to render 4 `<NavLink>` components. They will be for __/, /movies, /directors, /actors__ <-- in this order(test checks for this).
+This component needs to render 4 `<NavLink>` components. They will be for __/,
+/movies, /directors, /actors__ <-- in this order(test checks for this).
 
 #### `Home`
 
@@ -66,15 +75,21 @@ This component should render the text `Home Page`.
 
 #### `Movies`
 
-This component should render the text `Movies Page`, and make a new `<div>` for each movie. The `<div>` should contain the movie's title, time and an `<ul>` for each genre.
+This component should render the text `Movies Page`, and make a new `<div>` for
+each movie. The `<div>` should contain the movie's title, time and an `<ul>` for
+each genre.
 
 #### `Directors`
 
-This component should render the text `Directors Page`, and make a new `<div>` for each director. The `<div>` should contain the director's name and an `<ul>` for each of their movies.
+This component should render the text `Directors Page`, and make a new `<div>`
+for each director. The `<div>` should contain the director's name and an `<ul>`
+for each of their movies.
 
 #### `Actors`
 
-This component should render the text `Actors Page`, and make a new `<div>` for each actor. The `<div>` should contain the actor's name and an `<ul>` for each of their movies.
+This component should render the text `Actors Page`, and make a new `<div>` for
+each actor. The `<div>` should contain the actor's name and an `<ul>` for each
+of their movies.
 
 ## Resources
 
