@@ -62,7 +62,9 @@ This component already contains a `Router` wrapper where we'll include our
 particular routes. App should render our `Navbar` and 4 __React Router__ `Route`
 components with paths to __/, /movies, /directors & /actors__ and has a props of
 the corresponding component. When a user visits the root url, they should see
-the Home component.
+the Home component. Since a `Router` wrapper can only wrap one element, use a
+`div` to wrap the `Navbar` and routes. This allows us to apply a CSS class at the App
+component level.
 
 #### `Navbar`
 
