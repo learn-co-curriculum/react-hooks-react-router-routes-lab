@@ -25,7 +25,6 @@
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-16": "^1.0.1",
     "expect": "^21.2.1",
-    "jquery": "^3.1.1",
     "marked": "^0.3.6",
     "react": "^16.0.0 ",
     "react-dom": "^16.0.0 ",
