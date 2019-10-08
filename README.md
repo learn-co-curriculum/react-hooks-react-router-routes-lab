@@ -29,7 +29,8 @@ Let's work through this one component at a time
 ### Components
 
 Our `src` folder contains the following:
-```
+
+```text
 src/
 ├── data.js
 ├── index.js
@@ -95,7 +96,7 @@ of their movies.
 
 ## Resources
 
-[React Router](https://github.com/ReactTraining/react-router)
-[React Router Tutorial](https://reacttraining.com/react-router/web/guides/quick-start)
+* [React Router](https://github.com/ReactTraining/react-router)
+* [React Router Tutorial](https://reacttraining.com/react-router/web/guides/quick-start)
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/react-components-as-routes-lab'>React Components As Routes Lab</a> on Learn.co and start learning to code for free.</p>
