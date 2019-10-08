@@ -60,11 +60,13 @@ This file contains seed data for __Actors, Movies & Directors__
 #### `App`
 
 This component already contains a `Router` wrapper where we'll include our
-particular routes. App should render our `Navbar` and 4 __React Router__ `Route`
-components with paths to __/, /movies, /directors & /actors__ and has a props of
-the corresponding component. When a user visits the root url, they should see
-the Home component. Since a `Router` wrapper can only wrap one element, use a
-`div` to wrap the `Navbar` and routes. This allows us to apply a CSS class at the App
+particular routes. Inside this element, we'll need to render our `Navbar` and 4
+__React Router__ `Route` components with paths to __/, /movies, /directors &
+/actors__ and rendering the respective components. When a user visits the root
+URL, they should see the `Home` component.
+
+**Note**: Since a `Router` wrapper can only wrap one child element, use a `div` to
+wrap the `Navbar` and `Route`s. This allows us to apply a CSS class at the App
 component level.
 
 #### `Navbar`
