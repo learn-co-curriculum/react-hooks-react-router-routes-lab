@@ -102,5 +102,3 @@ movies.
 
 * [React Router](https://github.com/ReactTraining/react-router)
 * [React Router Tutorial](https://reacttraining.com/react-router/web/guides/quick-start)
-
-<p class='util--hide'>View <a href='https://learn.co/lessons/react-components-as-routes-lab'>React Components As Routes Lab</a> on Learn.co and start learning to code for free.</p>
