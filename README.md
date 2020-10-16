@@ -102,4 +102,3 @@ movies.
 
 * [React Router](https://github.com/ReactTraining/react-router)
 * [React Router Tutorial](https://reacttraining.com/react-router/web/guides/quick-start)
-
