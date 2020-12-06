@@ -1,46 +1,45 @@
 {
-  "name": "stuff",
+  "name": "react-hooks-react-router-routes-lab",
   "version": "0.1.0",
   "private": true,
-  "devDependencies": {
-    "babel-preset-env": "^1.6.0",
-    "extract-text-webpack-plugin": "^3.0.1",
-    "html-webpack-plugin": "^2.30.1",
-    "jsdom": "^9.9.1",
-    "mocha": "^5.2.0",
-    "react-scripts": "^1.1.4",
-    "sinon": "^1.17.6",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^3.1.11"
-  },
   "dependencies": {
-    "babel-core": "^6.22.1",
-    "babel-loader": "^7.1.2",
-    "babel-preset-airbnb": "^2.1.1",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-react": "^6.22.0",
-    "babel-preset-stage-1": "^6.24.1",
-    "chai": "^3.5.0",
-    "cuid": "^1.3.8",
-    "enzyme": "^3.1.0",
-    "enzyme-adapter-react-16": "^1.0.1",
-    "expect": "^21.2.1",
-    "jquery": "^3.5.0",
-    "marked": "^0.3.6",
-    "mocha-multi": "^1.0.1",
-    "react": "^16.0.0 ",
-    "react-dom": "^16.4.2",
-    "react-router-dom": "^4.2.2",
-    "react-test-renderer": "^16.0.0",
-    "sinon": "^1.17.7",
-    "superagent": "^3.3.2"
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "mocha --timeout 5000 test/root.js test/*.js",
-    "dev:hot": "webpack-dev-server --hot --inline --progress --colors --watch --display-error-details --display-cached --content-base ./",
-    "test:watch": "npm run test -- --watch",
+    "test": "echo \".results.json\" && react-scripts test --reporters=@ihollander/jest-learn-reporter --reporters=default --watchAll",
     "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@ihollander/jest-learn-reporter": "^1.0.1",
+    "mocha": "^8.2.1",
+    "chai": "^4.2.0",
+    "enzyme": "^3.11.0",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.3.1"
   }
 }

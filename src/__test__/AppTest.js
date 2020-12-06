@@ -1,13 +1,10 @@
-import React from 'react';
-import sinon from 'sinon';
+import React from 'react'
 import { expect } from 'chai';
 import Enzyme, { shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17'
+import App from '../components/App';
 
 Enzyme.configure({ adapter: new Adapter() })
-
-// Components
-import App from '../src/containers/App';
 
 describe('App', () => {
   let wrapper;
@@ -22,25 +19,25 @@ describe('App', () => {
 
   it('contains a <Route path="/">', () => {
     const route = wrapper.findWhere(n => n.props().path === '/')
-    expect(route).to.not.be.undefined;
+    expect(route).to.exist();
     expect(route.props().path).to.equal('/');
   })
 
   it('contains a <Route path="/actors">', () => {
     const route = wrapper.findWhere(n => n.props().path === '/actors')
-    expect(route).to.not.be.undefined;
+    expect(route).to.exist();
     expect(route.props().path).to.equal('/actors');
   })
 
   it('contains a <Route path="/directors">', () => {
     const route = wrapper.findWhere(n => n.props().path === '/directors')
-    expect(route).to.not.be.undefined;
+    expect(route).to.exist();
     expect(route.props().path).to.equal('/directors');
   })
 
   it('contains a <Route path="/movies">', () => {
     const route = wrapper.findWhere(n => n.props().path === '/movies')
-    expect(route).to.not.be.undefined;
+    expect(route).to.exist();
     expect(route.props().path).to.equal('/movies');
   })
 });

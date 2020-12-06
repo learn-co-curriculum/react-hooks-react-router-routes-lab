@@ -1,17 +1,11 @@
-import React from 'react';
-import sinon from 'sinon';
+import React from 'react'
 import { expect } from 'chai';
 import Enzyme, { shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17'
+import Movies from '../components/Movies';
+import { movies } from '../data';
 
 Enzyme.configure({ adapter: new Adapter() })
-
-// components
-import Movies from '../src/components/Movies';
-
-// data
-import { movies } from '../src/data';
-
 
 describe('Movies', () => {
   let wrapper;

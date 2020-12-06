@@ -1,16 +1,11 @@
-import React from 'react';
-import sinon from 'sinon';
+import React from 'react'
 import { expect } from 'chai';
 import Enzyme, { shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17'
+import Directors from '../components/Directors';
+import { directors } from '../data'
 
 Enzyme.configure({ adapter: new Adapter() })
-
-// components
-import Directors from '../src/components/Directors'
-
-// data
-import { directors } from '../src/data'
 
 describe('Directors', () => {
   let wrapper;
