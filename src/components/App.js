@@ -9,7 +9,21 @@ import Movies from './Movies';
 const App = () => {
   return (
     <div>
-      {/*{code here}*/}
+      <NavBar />
+      <Switch>
+        <Route path="/movies">
+          <Movies />
+        </Route>
+        <Route path="/directors">
+          <Directors />
+        </Route>
+        <Route path="/actors">
+          <Actors />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
     </div>
   );
 };
