@@ -62,10 +62,10 @@ This file contains seed data for **Actors**, **Movies**, and **Directors**.
 Inside this element, we'll need to render our `Navbar` and four **React Router**
 `Route` components with following paths:
 
-- `/`: should render the `Home` component
 - `/movies`: should render the `Movies` component
 - `/directors`: should render the `Directors` component
 - `/actors`: should render the `Actors` component
+- `/`: should render the `Home` component
 
 #### Navbar
 
@@ -78,9 +78,9 @@ This component should render the text `Home Page` in an `<h1>`.
 
 #### Movies
 
-This component should render the text `Movies Page` in an `<h1>`, and make a new `<div>` for
-each movie. The `<div>` should contain the movie's title, time and a `<ul>` with a list of its
-genres.
+This component should render the text `Movies Page` in an `<h1>`, and make a new
+`<div>` for each movie. The `<div>` should contain the movie's title, time and a
+`<ul>` with a list of its genres, each within their own `<li>`.
 
 #### Directors
 
