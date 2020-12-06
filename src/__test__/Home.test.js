@@ -13,11 +13,11 @@ describe('Home', () => {
     wrapper = shallow(<Home />);
   })
 
-  it('should only render one <h1 /> inside of the <div />', () => {
-    expect(wrapper.children().first().type()).to.equal('h1');
+  it('should only render one <h1 />', () => {
+    expect(wrapper.find('h1')).to.have.lengthOf(1);
   });
 
   it("should render 'Home Page' inside of the <h1 />", () => {
-    expect(wrapper.children().first().text()).to.contain('Home Page');
+    expect(wrapper.find('h1').first().text()).to.contain('Home Page');
   });
 });

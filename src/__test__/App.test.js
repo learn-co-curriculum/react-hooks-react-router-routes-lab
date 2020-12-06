@@ -19,25 +19,25 @@ describe('App', () => {
 
   it('contains a <Route path="/">', () => {
     const route = wrapper.findWhere(n => n.props().path === '/')
-    expect(route).to.exist();
+    expect(route).to.have.lengthOf(1);
     expect(route.props().path).to.equal('/');
   })
 
   it('contains a <Route path="/actors">', () => {
     const route = wrapper.findWhere(n => n.props().path === '/actors')
-    expect(route).to.exist();
+    expect(route).to.have.lengthOf(1);
     expect(route.props().path).to.equal('/actors');
   })
 
   it('contains a <Route path="/directors">', () => {
     const route = wrapper.findWhere(n => n.props().path === '/directors')
-    expect(route).to.exist();
+    expect(route).to.have.lengthOf(1);
     expect(route.props().path).to.equal('/directors');
   })
 
   it('contains a <Route path="/movies">', () => {
     const route = wrapper.findWhere(n => n.props().path === '/movies')
-    expect(route).to.exist();
+    expect(route).to.have.lengthOf(1);
     expect(route.props().path).to.equal('/movies');
   })
 });
