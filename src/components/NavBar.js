@@ -1,7 +1,7 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
-const NavBar = () => {
+function NavBar() {
   return (
     <div className="navbar">
       <NavLink to="/">Home</NavLink>
@@ -10,6 +10,6 @@ const NavBar = () => {
       <NavLink to="/actors">Actors</NavLink>
     </div>
   );
-};
+}
 
 export default NavBar;

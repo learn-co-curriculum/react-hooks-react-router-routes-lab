@@ -1,18 +1,17 @@
-import React from 'react';
-import { directors } from '../data';
+import React from "react";
+import { directors } from "../data";
 
-const Directors = () => {
-  
-  const directorItems = directors.map(director => (
+function Directors() {
+  const directorItems = directors.map((director) => (
     <div key={director.name}>
       <h2>{director.name}</h2>
       <ul>
-        {director.movies.map(movie => (
+        {director.movies.map((movie) => (
           <li key={movie}>{movie}</li>
         ))}
       </ul>
     </div>
-  ))
+  ));
 
   return (
     <div>
@@ -22,4 +21,4 @@ const Directors = () => {
   );
 }
 
-export default Directors
+export default Directors;
