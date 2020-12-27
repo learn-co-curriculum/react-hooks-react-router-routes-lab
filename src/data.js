@@ -1,9 +1,8 @@
-let movies = [
+const movies = [
   {
     title: "Doctor Strange",
     time: 115,
     genres: ["Action", "Adventure", "Fantasy"],
-    metascore: 74,
   },
   {
     title: "Trolls",
@@ -17,7 +16,7 @@ let movies = [
   },
 ];
 
-let actors = [
+const actors = [
   {
     name: "Benedict Cumberbatch",
     movies: ["Doctor Strange", "The Imitation Game", "Black Mass"],
@@ -28,7 +27,7 @@ let actors = [
   },
   {
     name: "Anna Kendrick",
-    movies: ["Trolls", "Pitch Perfect", "Into The Wood"],
+    movies: ["Pitch Perfect", "Into The Wood"],
   },
   {
     name: "Tom Cruise",
@@ -40,7 +39,7 @@ let actors = [
   },
 ];
 
-let directors = [
+const directors = [
   {
     name: "Scott Derrickson",
     movies: ["Doctor Strange", "Sinister", "The Exorcism of Emily Rose"],
@@ -55,8 +54,4 @@ let directors = [
   },
 ];
 
-module.exports = {
-  movies,
-  actors,
-  directors,
-};
+export { movies, actors, directors };
