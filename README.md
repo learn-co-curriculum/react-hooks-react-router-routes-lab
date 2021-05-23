@@ -1,17 +1,11 @@
-# React Components as Routes Lab
+# Basic Routes Lab
 
-## Overview
+## Learning Goals
 
-In this lab, you will create a simple client-side routing application with
-**React Router**.
+- Use the `<Route>` component to display different components based on the URL
+- Use the `<Navbar>` component to allow client-side navigation
 
-## Objectives
-
-- Practice building an application with **React Router**
-- Access routes using a `Navbar` with matched routes
-- Visit different "views" in the application by accessing different routes
-
-## React Router App
+## Introduction
 
 In this lab we are going to build out an application that has routes for a Home
 Page, Actors Page, Movies Page and Directors Page. Our goal is to provide routes
@@ -24,13 +18,13 @@ This is what our app should look like when we are done with this lab:
 - [Directors Page](https://s3.amazonaws.com/learn-verified/react-router-lab-directors-page.png)
 - [Actors Page](https://s3.amazonaws.com/learn-verified/react-router-lab-actors-page.png)
 
-Let's work through this one component at a time
+Let's work through this one component at a time.
 
-### Components
+## Setup
 
 Our `src` folder contains the following:
 
-```text
+```txt
 src/
 ├── data.js
 ├── index.js
@@ -46,53 +40,53 @@ src/
 All of the file and module imports are done for you, so you just need to focus
 on the JSX for these components.
 
-#### index.js
+### index.js
 
 Our `index.js` file is completed for us. It loads the `BrowserRouter` component
 from React Router, as well as `App` as the top level component.
 
-#### data.js
+### data.js
 
 This file contains seed data for **Actors**, **Movies**, and **Directors**.
 
-## Component Info
+## Components
 
-#### App
+### App
 
-Inside this element, we'll need to render our `Navbar` and four **React Router**
-`Route` components with following paths:
+Inside this component, we'll need to render our `Navbar` and four **React
+Router** `Route` components with following paths:
 
 - `/movies`: should render the `Movies` component
 - `/directors`: should render the `Directors` component
 - `/actors`: should render the `Actors` component
 - `/`: should render the `Home` component
 
-#### Navbar
+### Navbar
 
-This component needs to render 4 `NavLink` components. They will be for `/`,
+This component needs to render four `NavLink` components. They will be for `/`,
 `/movies`, `/directors`, `/actors`, in this order (test checks for this).
 
-#### Home
+### Home
 
 This component should render the text `Home Page` in an `<h1>`.
 
-#### Movies
+### Movies
 
 This component should render the text `Movies Page` in an `<h1>`, and make a new
 `<div>` for each movie. The `<div>` should contain the movie's title, time and a
 `<ul>` with a list of its genres, each within their own `<li>`.
 
-#### Directors
+### Directors
 
-This component should render the text `Directors Page` in an `<h1>`, and make a new `<div>`
-for each director. The `<div>` should contain the director's name and a `<ul>` with a list
-of their movies.
+This component should render the text `Directors Page` in an `<h1>`, and make a
+new `<div>` for each director. The `<div>` should contain the director's name
+and a `<ul>` with a list of their movies.
 
-#### Actors
+### Actors
 
-This component should render the text `Actors Page` in an `<h1>`, and make a new `<div>` for
-each actor. The `<div>` should contain the actor's name and a `<ul>` with a list of their
-movies. 
+This component should render the text `Actors Page` in an `<h1>`, and make a new
+`<div>` for each actor. The `<div>` should contain the actor's name and a `<ul>`
+with a list of their movies.
 
 > Note: The tests will count how many `<div>`s are nested inside your `Movies`,
 > `Directors`, and `Actors` components. So to get tests to pass, you must create
@@ -101,5 +95,4 @@ movies.
 
 ## Resources
 
-- [React Router](https://github.com/ReactTraining/react-router)
-- [React Router Tutorial](https://reacttraining.com/react-router/web/guides/quick-start)
+- [React Router](https://reactrouter.com/web/guides/quick-start)
