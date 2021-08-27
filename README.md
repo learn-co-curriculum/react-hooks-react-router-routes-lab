@@ -3,15 +3,15 @@
 ## Learning Goals
 
 - Use the `<Route>` component to display different components based on the URL
-- Use the `<Navbar>` component to allow client-side navigation
+- Use the `<NavBar>` component to allow client-side navigation
 
 ## Introduction
 
-In this lab we are going to build out an application that has routes for a Home
-Page, Actors Page, Movies Page and Directors Page. Our goal is to provide routes
-and links for these 4 pages.
+In this lab we are going to build out a Movie application that has routes for a
+Home Page, Actors Page, Movies Page and Directors Page. Our goal is to provide
+routes and links for these 4 pages.
 
-This is what our app should look like when we are done with this lab:
+Here is what each page of our app should look like when we are done with this lab:
 
 - [Home Page](https://s3.amazonaws.com/learn-verified/react-router-lab-home-page.png)
 - [Movies Page](https://s3.amazonaws.com/learn-verified/react-router-lab-movies-page.png)
@@ -53,15 +53,15 @@ This file contains seed data for **Actors**, **Movies**, and **Directors**.
 
 ### App
 
-Inside this component, we'll need to render our `Navbar` and four **React
-Router** `Route` components with following paths:
+Inside this component, we'll need to render our `NavBar` and four **React
+Router** `Route` components with the following paths:
 
 - `/movies`: should render the `Movies` component
 - `/directors`: should render the `Directors` component
 - `/actors`: should render the `Actors` component
 - `/`: should render the `Home` component
 
-### Navbar
+### NavBar
 
 This component needs to render four `NavLink` components. They will be for `/`,
 `/movies`, `/directors`, `/actors`, in this order (test checks for this).
