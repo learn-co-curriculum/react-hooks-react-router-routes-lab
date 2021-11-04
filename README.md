@@ -95,4 +95,4 @@ with a list of their movies.
 
 ## Resources
 
-- [React Router](https://reactrouter.com/web/guides/quick-start)
+- [React Router](https://v5.reactrouter.com/web/guides/quick-start)
