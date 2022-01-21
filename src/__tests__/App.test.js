@@ -2,59 +2,54 @@ import "@testing-library/jest-dom";
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { createMemoryHistory } from "history";
-import { Router } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import App from "../components/App";
 
 test("renders the <NavBar /> component", () => {
-  const history = createMemoryHistory();
   const { container } = render(
-    <Router history={history}>
+    <BrowserRouter>
       <App />
-    </Router>
+    </BrowserRouter>
   );
   expect(container.querySelector(".navbar")).toBeInTheDocument();
 });
 
 test('renders the Home component using the <Route path="/">', () => {
-  const history = createMemoryHistory();
-  history.push("/");
+  window.history.pushState({}, "", "/");
   render(
-    <Router history={history}>
+    <BrowserRouter>
       <App />
-    </Router>
+    </BrowserRouter>
   );
   expect(screen.queryByText(/Home Page/g)).toBeInTheDocument();
 });
 
 test('renders the Actors component using the <Route path="/actors">', () => {
-  const history = createMemoryHistory();
-  history.push("/actors");
+  window.history.pushState({}, "", "/actors");
   render(
-    <Router history={history}>
+    <BrowserRouter>
       <App />
-    </Router>
+    </BrowserRouter>
   );
   expect(screen.queryByText(/Actors Page/g)).toBeInTheDocument();
 });
 
 test('renders the Directors component using the <Route path="/directors">', () => {
-  const history = createMemoryHistory();
-  history.push("/directors");
+  window.history.pushState({}, "", "/directors");
   render(
-    <Router history={history}>
+    <BrowserRouter>
       <App />
-    </Router>
+    </BrowserRouter>
   );
   expect(screen.queryByText(/Directors Page/g)).toBeInTheDocument();
 });
 
 test('renders the Movies component using the <Route path="/movies">', () => {
-  const history = createMemoryHistory();
-  history.push("/movies");
+  window.history.pushState({}, "", "/movies");
   render(
-    <Router history={history}>
+    <BrowserRouter>
       <App />
-    </Router>
+    </BrowserRouter>
   );
   expect(screen.queryByText(/Movies Page/g)).toBeInTheDocument();
 });
