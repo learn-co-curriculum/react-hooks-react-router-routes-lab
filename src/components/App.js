@@ -11,7 +11,7 @@ function App() {
   <BrowserRouter>
     <div>
       <NavBar />
-      <Route exact path="/" component={Home} />
+      <Route path="/" component={Home} />
       <Route path="/actors" component={Actors} />
       <Route path="/directors" component={Directors} />
       <Route path="/movies" component={Movies} />
