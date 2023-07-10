@@ -2,12 +2,12 @@ import "@testing-library/jest-dom";
 import React from "react";
 import {Router, RouterProvider, createMemoryRouter} from "react-router-dom"
 import { render, screen } from "@testing-library/react";
-import ErrorPage from "../components/ErrorPage";
-import App from "../components/App";
-import Home from "../components/Home";
-import Actors from "../components/Actors";
-import Directors from "../components/Directors";
-import Movies from "../components/Movies";
+import ErrorPage from "../pages/ErrorPage";
+import App from "../App";
+import Home from "../pages/Home";
+import Actors from "../pages/Actors";
+import Directors from "../pages/Directors";
+import Movies from "../pages/Movies";
 
 const routes = [
         {

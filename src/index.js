@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, Router, RouterProvider } from "react-router-dom";
-import App from "./components/App";
-import ErrorPage from "./components/ErrorPage";
-import Home from "./components/Home";
-import Movies from "./components/Movies";
-import Directors from "./components/Directors";
-import Actors from "./components/Actors";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import App from "./App";
+import ErrorPage from "./pages/ErrorPage";
+import Home from "./pages/Home";
+import Movies from "./pages/Movies";
+import Directors from "./pages/Directors";
+import Actors from "./pages/Actors";
 
 const router = createBrowserRouter([
   {
@@ -36,5 +36,3 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(<RouterProvider router={router} />);
-
-export {router};

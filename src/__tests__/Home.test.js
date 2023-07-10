@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Home from "../components/Home";
+import Home from "../pages/Home";
 
 test("renders 'Home Page' inside of a <h1 />", () => {
   render(<Home />);

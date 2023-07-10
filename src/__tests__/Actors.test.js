@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Actors from "../components/Actors";
+import Actors from "../pages/Actors";
 import { actors } from "../data";
 
 test("renders without any errors", () => {

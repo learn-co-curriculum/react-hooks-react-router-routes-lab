@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Movies from "../components/Movies";
+import Movies from "../pages/Movies";
 import { movies } from "../data";
 
 test("renders without any errors", () => {
