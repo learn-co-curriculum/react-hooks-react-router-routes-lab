@@ -54,7 +54,7 @@ test("renders an error page when given a bad URL", () =>{
     expect(screen.getByText(/Whoops, that isn't the right page/g)).toBeInTheDocument()
 })
 
-test('renders the Home component using the <Route path="/">', () => {
+test('renders the Home component on route "/"', () => {
   const router = createMemoryRouter(routes)
   render(
     <RouterProvider router={router}/>
@@ -62,7 +62,7 @@ test('renders the Home component using the <Route path="/">', () => {
   expect(screen.getByText(/Home Page/g)).toBeInTheDocument();
 });
 
-test('renders the Actors component using the <Route path="/actors">', () => {
+test('renders the Actors component on route "/actors"', () => {
     const router = createMemoryRouter(routes, {
         initialEntries: ['/actors'],
         initialIndex: 0
@@ -73,7 +73,7 @@ test('renders the Actors component using the <Route path="/actors">', () => {
   expect(screen.getByText(/Actors Page/g)).toBeInTheDocument();
 });
 
-test('renders the Directors component using the <Route path="/directors">', () => {
+test('renders the Directors component on route "/directors"', () => {
     const router = createMemoryRouter(routes, {
         initialEntries: ['/directors'],
         initialIndex: 0
@@ -84,7 +84,7 @@ test('renders the Directors component using the <Route path="/directors">', () =
   expect(screen.queryByText(/Directors Page/g)).toBeInTheDocument();
 });
 
-test('renders the Movies component using the <Route path="/movies">', () => {
+test('renders the Movies component on route "/movies"', () => {
     const router = createMemoryRouter(routes, {
         initialEntries: ['/movies'],
         initialIndex: 0
