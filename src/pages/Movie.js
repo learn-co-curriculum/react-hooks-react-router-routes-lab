@@ -6,7 +6,8 @@ function Movie() {
   const params = useParams()
   
   const movieInfo = movies.find(movie => movie.title === params.title)
-
+  const p = <p></p>
+  console.log(p.tagName)
   return (
     <>
       <header>
@@ -14,6 +15,7 @@ function Movie() {
       </header>
       <main>
         <h1>{movieInfo.title}</h1>
+        <p>{movieInfo.time}</p>
         <p>
           {movieInfo.genres.map(genre => <span key={genre}>{genre}</span>)}
         </p>

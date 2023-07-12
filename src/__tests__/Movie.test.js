@@ -1,45 +1,47 @@
 import "@testing-library/jest-dom";
-import React from "react";
+import { RouterProvider, createMemoryRouter} from "react-router-dom"
 import { render, screen } from "@testing-library/react";
+import routes from "../routes";
 import Movie from "../pages/Movie";
 import { movies } from "../data";
+
+const title = "Doctor Strange"
+const router = createMemoryRouter(routes, {
+    initialEntries: [`/movie/${title}`],
+    initialIndex: 0
+})
 
 test("renders without any errors", () => {
   const errorSpy = jest.spyOn(global.console, "error");
 
-  render(<Movie />);
+  render(<RouterProvider router={router} />);
 
   expect(errorSpy).not.toHaveBeenCalled();
 
   errorSpy.mockRestore();
 });
 
-test("renders 'Movies Page' inside of a <h1 />", () => {
-  render(<Movie />);
-  const h1 = screen.queryByText(/Movies Page/g);
+test("renders movie's title in an h1", () => {
+  render(<RouterProvider router={router} />);
+  const h1 = screen.queryByText(/Doctor Strange/g);
   expect(h1).toBeInTheDocument();
   expect(h1.tagName).toBe("H1");
 });
 
-test("renders each movie's title and time", () => {
-  render(<Movie />);
-  for (const movie of movies) {
-    expect(
-      screen.queryByText(movie.title, { exact: false })
-    ).toBeInTheDocument();
-    expect(
-      screen.queryByText(movie.time.toString(), { exact: false })
-    ).toBeInTheDocument();
-  }
+test("renders movie's time within a p tag", () => {
+  render(<RouterProvider router={router} />);
+  const p = screen.queryByText(/115/g);
+  console.log(p.tagName)
+  expect(p).toBeInTheDocument();
+  expect(p.tagName).toBe("P");
 });
 
-test("renders a <li /> for each genre", () => {
-  render(<Moview />);
-  for (const movie of movies) {
-    for (const genre of movie.genres) {
-      const li = screen.queryAllByText(genre, { exact: false })[0];
-      expect(li).toBeInTheDocument();
-      expect(li.tagName).toBe("LI");
-    }
-  }
+test("renders a span for each genre", () => {
+  render(<RouterProvider router={router} />);
+  const genres = ["Action", "Adventure", "Fantasy"];
+  genres.forEach(genre =>{
+    const span = screen.queryByText(genre);
+    expect(span).toBeInTheDocument();
+    expect(span.tagName).toBe("SPAN");
+  })
 });

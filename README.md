@@ -37,19 +37,19 @@ All of the file and module imports are done for you, so you just need to focus
 on the JSX for these components. You're free to make new components when you
 feel that doing so is warranted.
 
+### routes.js
+
+You'll be adding the routes you create to this file and saving them within the
+`routes` variable. You'll need to provide routes for `/`, `/directors`,
+`/actors`, and `/movie`. The `/movie` route should also include a URL parameter
+called `title`. Don't forget that you'll need to import components into this
+file!
+
 ### index.js
 
-Our `index.js` file is currently just rendering our Home component. You'll need
-to update it to provide routing to our application using `createBrowserRouter`
-and `RouterProvider`.
-
-You'll need to provide routes for `/`, `/directors`, `/actors`, and `/movie`.
-The `/movie` route should also include a URL parameter called `title`.
-
->**Note**: You'll need to save your array of route objects to the `routes`
->variable within this file, then pass that variable to `createBrowserRouter`.
->The `route` variable is being used in the tests - _if you do not save your
->routes to this variable, you will not pass the tests_.
+Our `index.js` file is currently broken. (It's not rendering anything!) You'll
+need to update it to provide routing to our application using
+`createBrowserRouter` and `RouterProvider`.
 
 ### data.js
 
@@ -84,8 +84,8 @@ This component should render on the `/movie` route. You will need to include a
 URL parameter of `title` on that route.
 
 The component will display information about one specific movie. It should
-display the movie's title in an `<h1>` tag, and each movie genre within its own
-`span` tag.
+display the movie's title in an `<h1>` tag, the movie's time with a `p` tag, and
+each movie genre within its own `span` tag.
 
 You'll need to use the `useParams` hook to get URL parameter data about which
 movie you want to render, then use that data to render the appropriate movie.
