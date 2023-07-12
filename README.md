@@ -2,21 +2,16 @@
 
 ## Learning Goals
 
-- Use the `<Route>` component to display different components based on the URL
 - Use the `<NavBar>` component to allow client-side navigation
+- Use `createBrowserRouter` to create a client-side router
+- Use `errorElement` to set up router error handling
+- Use `RouterProvider` to include the router in your app
 
 ## Introduction
 
 In this lab we are going to build out a Movie application that has routes for a
-Home Page, Actors Page, Movies Page and Directors Page. Our goal is to provide
+Home Page, Actors Page, Movie Page and Directors Page. Our goal is to provide
 routes and links for these 4 pages.
-
-Here is what each page of our app should look like when we are done with this lab:
-
-- [Home Page](https://s3.amazonaws.com/learn-verified/react-router-lab-home-page.png)
-- [Movies Page](https://s3.amazonaws.com/learn-verified/react-router-lab-movies-page.png)
-- [Directors Page](https://s3.amazonaws.com/learn-verified/react-router-lab-directors-page.png)
-- [Actors Page](https://s3.amazonaws.com/learn-verified/react-router-lab-actors-page.png)
 
 Let's work through this one component at a time.
 
@@ -28,13 +23,13 @@ Our `src` folder contains the following:
 src/
 ├── data.js
 ├── index.js
-└── components/
-    ├── App.js
+├── components/
+    ├── NavBar.js
+└── pages/
     ├── Actors.js
     ├── Directors.js
     ├── Home.js
-    ├── Movies.js
-    └── NavBar.js
+    ├── Movie.js
 ```
 
 All of the file and module imports are done for you, so you just need to focus
