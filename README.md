@@ -25,6 +25,7 @@ src/
 ├── index.js
 ├── components/
     ├── NavBar.js
+    ├── MovieCard.js
 └── pages/
     ├── Actors.js
     ├── Directors.js
@@ -33,12 +34,22 @@ src/
 ```
 
 All of the file and module imports are done for you, so you just need to focus
-on the JSX for these components.
+on the JSX for these components. You're free to make new components when you
+feel that doing so is warranted.
 
 ### index.js
 
-Our `index.js` file is completed for us. It loads the `BrowserRouter` component
-from React Router, as well as `App` as the top level component.
+Our `index.js` file is currently just rendering our Home component. You'll need
+to update it to provide routing to our application using `createBrowserRouter`
+and `RouterProvider`.
+
+You'll need to provide routes for `/`, `/directors`, `/actors`, and `/movie`.
+The `/movie` route should also include a URL parameter called `title`.
+
+>**Note**: You'll need to save your array of route objects to the `routes`
+>variable within this file, then pass that variable to `createBrowserRouter`.
+>The `route` variable is being used in the tests - _if you do not save your
+>routes to this variable, you will not pass the tests_.
 
 ### data.js
 
@@ -46,47 +57,62 @@ This file contains seed data for **Actors**, **Movies**, and **Directors**.
 
 ## Components
 
-### App
-
-Inside this component, we'll need to render our `NavBar` and four **React
-Router** `Route` components with the following paths:
-
-- `/movies`: should render the `Movies` component
-- `/directors`: should render the `Directors` component
-- `/actors`: should render the `Actors` component
-- `/`: should render the `Home` component
-
 ### NavBar
 
-This component needs to render four `NavLink` components. They will be for `/`,
-`/movies`, `/directors`, `/actors`, in this order (test checks for this).
+This component needs to render three `NavLink` components. They will be for `/`,
+`/directors`, `/actors`, in this order (test checks for this). Each page should
+render the NavBar.
+
+### MovieCard
+
+This component is already set up to render data about one movie. You'll need to
+pass it the appropriate props to render a movie. You'll also need to use a
+`Link` component from `react-router-dom` that uses dynamic routing to link a
+user to the `Movie` page, using the movie title as a parameter.
+
+## Pages
 
 ### Home
 
-This component should render the text `Home Page` in an `<h1>`.
+This component should render on the `/` route. It should display the text `Home
+Page` in an `<h1>`. It should also render a list of movies using `MovieCard`
+components.
 
-### Movies
+### Movie
 
-This component should render the text `Movies Page` in an `<h1>`, and make a new
-`<div>` for each movie. The `<div>` should contain the movie's title, time and a
-`<ul>` with a list of its genres, each within their own `<li>`.
+This component should render on the `/movie` route. You will need to include a
+URL parameter of `title` on that route.
+
+The component will display information about one specific movie. It should
+display the movie's title in an `<h1>` tag, and each movie genre within its own
+`span` tag.
+
+You'll need to use the `useParams` hook to get URL parameter data about which
+movie you want to render, then use that data to render the appropriate movie.
 
 ### Directors
 
-This component should render the text `Directors Page` in an `<h1>`, and make a
-new `<div>` for each director. The `<div>` should contain the director's name
-and a `<ul>` with a list of their movies.
+This component should render on the `/directors` route. It should display the
+text `Directors Page` in an `<h1>`, and make a new `<article>` for each
+director. The `<article>` should contain the director's name in an `<h2>`. and a
+`<ul>` with a list of their movies.
 
 ### Actors
 
 This component should render the text `Actors Page` in an `<h1>`, and make a new
-`<div>` for each actor. The `<div>` should contain the actor's name and a `<ul>`
-with a list of their movies.
+`<article>` for each actor. The `<article>` should contain the actor's name in
+an `<h2>` and a `<ul>` with a list of their movies.
 
-> Note: The tests will count how many `<div>`s are nested inside your `Movies`,
+> Note: The tests will count how many `<article>`s are nested inside your
 > `Directors`, and `Actors` components. So to get tests to pass, you must create
-> _exactly one_ `<div>` for each movie, director, or actor, and no additional
-> nested `<div>`s in those components.
+> _exactly one_ `<article>` for each director or actor, and no additional nested
+> `<article>`s in those components.
+
+### ErrorPage
+
+You'll need to create a new component within the `pages` folder for our
+`ErrorPage`. This page should display our `NavBar` component, along with the
+text `Oops! Looks like something went wrong.` in an `h1`.
 
 ## Resources
 

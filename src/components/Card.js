@@ -1,13 +1,11 @@
-function Card({title, list, time = null}) {
-    const infoList = list.map(item => <li key={item}>{item}</li>)
+import React from 'react'
+
+function Card({name, movies}) {
   return (
-    <div>
-        <h2>{title}</h2>
-        {time ? <h3>{time} minutes</h3>: time}
-        <ul>
-            {infoList}
-        </ul>
-    </div>
+    <article>
+        <h2>{name}</h2>
+        <ul>{movies.map(movie => <li key={movie}>{movie}</li>)}</ul>
+    </article>
   )
 }
 

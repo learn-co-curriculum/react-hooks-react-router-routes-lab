@@ -1,39 +1,7 @@
 import "@testing-library/jest-dom";
-import React from "react";
-import {Router, RouterProvider, createMemoryRouter} from "react-router-dom"
+import { RouterProvider, createMemoryRouter} from "react-router-dom"
 import { render, screen } from "@testing-library/react";
-import ErrorPage from "../pages/ErrorPage";
-import App from "../App";
-import Home from "../pages/Home";
-import Actors from "../pages/Actors";
-import Directors from "../pages/Directors";
-import Movies from "../pages/Movies";
-
-const routes = [
-        {
-          path: '/',
-          element: <App />,
-          errorElement: <ErrorPage />,
-          children: [
-            {
-              path: '/',
-              element: <Home />,
-            },
-            {
-              path: '/actors',
-              element: <Actors />
-            },
-            {
-              path: '/directors',
-              element: <Directors />
-            },
-            {
-              path: '/movies',
-              element: <Movies />
-            }
-          ]
-        }
-      ]
+import routes from "../routes.js";
 
 test("renders the <NavBar /> component", () => {
   const router = createMemoryRouter(routes)
@@ -84,13 +52,14 @@ test('renders the Directors component on route "/directors"', () => {
   expect(screen.queryByText(/Directors Page/g)).toBeInTheDocument();
 });
 
-test('renders the Movies component on route "/movies"', () => {
+test('renders the Movies component on route "/movie/:title"', () => {
+    const title = "Doctor Strange"
     const router = createMemoryRouter(routes, {
-        initialEntries: ['/movies'],
+        initialEntries: [`/movie/${title}`],
         initialIndex: 0
     })
   render(
     <RouterProvider router={router}/>
 );
-  expect(screen.queryByText(/Movies Page/g)).toBeInTheDocument();
+  expect(screen.queryByText(/Doctor Strange/g)).toBeInTheDocument();
 });

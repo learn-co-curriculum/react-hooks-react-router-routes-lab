@@ -1,13 +1,13 @@
 import "@testing-library/jest-dom";
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import Movies from "../pages/Movies";
+import Movie from "../pages/Movie";
 import { movies } from "../data";
 
 test("renders without any errors", () => {
   const errorSpy = jest.spyOn(global.console, "error");
 
-  render(<Movies />);
+  render(<Movie />);
 
   expect(errorSpy).not.toHaveBeenCalled();
 
@@ -15,14 +15,14 @@ test("renders without any errors", () => {
 });
 
 test("renders 'Movies Page' inside of a <h1 />", () => {
-  render(<Movies />);
+  render(<Movie />);
   const h1 = screen.queryByText(/Movies Page/g);
   expect(h1).toBeInTheDocument();
   expect(h1.tagName).toBe("H1");
 });
 
 test("renders each movie's title and time", () => {
-  render(<Movies />);
+  render(<Movie />);
   for (const movie of movies) {
     expect(
       screen.queryByText(movie.title, { exact: false })
@@ -34,7 +34,7 @@ test("renders each movie's title and time", () => {
 });
 
 test("renders a <li /> for each genre", () => {
-  render(<Movies />);
+  render(<Moview />);
   for (const movie of movies) {
     for (const genre of movie.genres) {
       const li = screen.queryAllByText(genre, { exact: false })[0];

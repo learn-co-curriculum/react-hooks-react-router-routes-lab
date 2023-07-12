@@ -1,15 +1,20 @@
-import React from "react";
 import { actors } from "../data";
+import NavBar from "../components/NavBar";
 import Card from "../components/Card";
 
 function Actors() {
-  const actorCards = actors.map(actor => <Card key={actor.name} title={actor.name} list={actor.movies} />)
+  const actorCards = actors.map(actor => <Card key={actor.name} {...actor} />)
 
   return (
-    <div>
-      <h1>Actors Page</h1>
-      {actorCards}
-    </div>
+    <>
+      <header>
+        <NavBar />
+      </header>
+      <main>
+        <h1>Actors Page</h1>
+        {actorCards}
+      </main>
+    </>
   );
 }
 
