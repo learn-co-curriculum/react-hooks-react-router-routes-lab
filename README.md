@@ -23,6 +23,7 @@ Our `src` folder contains the following:
 src/
 ├── data.js
 ├── index.js
+├── routes.js
 ├── components/
     ├── NavBar.js
     ├── MovieCard.js
@@ -33,9 +34,8 @@ src/
     ├── Movie.js
 ```
 
-All of the file and module imports are done for you, so you just need to focus
-on the JSX for these components. You're free to make new components when you
-feel that doing so is warranted.
+You'll need to fill out these various files to get your app up and running.
+You're free to make new components when you feel that doing so is warranted.
 
 ### routes.js
 

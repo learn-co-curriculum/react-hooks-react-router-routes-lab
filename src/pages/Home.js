@@ -1,18 +1,14 @@
 import { movies } from "../data";
-import NavBar from "../components/NavBar";
-import MovieCard from "../components/MovieCard";
 
 function Home() {
-  const movieCards = movies.map(movie =><MovieCard key={movie.title} {...movie}/>)
 
   return (
     <>
       <header>
-        <NavBar />
+        {/* What component should go here? */}
       </header>
       <main>
-        <h1>Home Page</h1>
-        {movieCards}
+        {/* Info goes here! */}
       </main>
     </>
   );
