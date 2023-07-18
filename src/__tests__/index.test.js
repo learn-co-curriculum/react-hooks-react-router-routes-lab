@@ -11,17 +11,6 @@ test("renders the <NavBar /> component", () => {
   expect(document.querySelector(".navbar")).toBeInTheDocument();
 });
 
-test("renders an error page when given a bad URL", () =>{
-    const router = createMemoryRouter(routes, {
-        initialEntries: ["/bad-route"],
-        initialIndex: 0
-    })
-    render(
-        <RouterProvider router={router} />
-    )
-    expect(screen.getByText(/Oops! Looks like something went wrong./g)).toBeInTheDocument()
-})
-
 test('renders the Home component on route "/"', () => {
   const router = createMemoryRouter(routes)
   render(
@@ -63,3 +52,14 @@ test('renders the Movies component on route "/movie/:title"', () => {
 );
   expect(screen.queryByText(/Doctor Strange/g)).toBeInTheDocument();
 });
+
+test("renders an error page when given a bad URL", () =>{
+  const router = createMemoryRouter(routes, {
+      initialEntries: ["/bad-route"],
+      initialIndex: 0
+  })
+  render(
+      <RouterProvider router={router} />
+  )
+  expect(screen.getByText(/Oops! Looks like something went wrong./g)).toBeInTheDocument()
+})

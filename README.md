@@ -17,7 +17,7 @@ Let's work through this one component at a time.
 
 ## Setup
 
-Our `src` folder contains the following:
+Our `src` folder contains the following JavaScript files:
 
 ```txt
 src/
