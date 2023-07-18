@@ -10,7 +10,7 @@
 ## Introduction
 
 In this lab we are going to build out a Movie application that has routes for a
-Home Page, Actors Page, Movie Page and Directors Page. Our goal is to provide
+Home Page, Actors Page, Movie Page, and Directors Page. Our goal is to provide
 routes and links for these 4 pages.
 
 Let's work through this one component at a time.
@@ -93,15 +93,16 @@ movie you want to render, then use that data to render the appropriate movie.
 ### Directors
 
 This component should render on the `/directors` route. It should display the
-text `Directors Page` in an `<h1>`, and make a new `<article>` for each
-director. The `<article>` should contain the director's name in an `<h2>`. and a
-`<ul>` with a list of their movies.
+text `Directors Page` in an `<h1>`, and render a new `<article>` element for
+each director in our array of directors. The `<article>` should contain the
+director's name in an `<h2>` and a `<ul>` with a list of their movies.
 
 ### Actors
 
-This component should render the text `Actors Page` in an `<h1>`, and make a new
-`<article>` for each actor. The `<article>` should contain the actor's name in
-an `<h2>` and a `<ul>` with a list of their movies.
+This component should render the text `Actors Page` in an `<h1>`, and render a
+new `<article>` element for each actor in our array of actors. The `<article>`
+should contain the actor's name in an `<h2>` and a `<ul>` with a list of their
+movies.
 
 > Note: The tests will count how many `<article>`s are nested inside your
 > `Directors`, and `Actors` components. So to get tests to pass, you must create

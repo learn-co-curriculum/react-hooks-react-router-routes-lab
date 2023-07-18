@@ -19,7 +19,7 @@ test("renders an error page when given a bad URL", () =>{
     render(
         <RouterProvider router={router} />
     )
-    expect(screen.getByText(/Whoops, that isn't the right page/g)).toBeInTheDocument()
+    expect(screen.getByText(/Oops! Looks like something went wrong./g)).toBeInTheDocument()
 })
 
 test('renders the Home component on route "/"', () => {
