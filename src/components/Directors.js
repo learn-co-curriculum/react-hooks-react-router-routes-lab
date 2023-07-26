@@ -20,6 +20,6 @@ function Directors() {
         }
       </div>
 
-    </div>;
+      </div>;
 } 
 export default Directors;
