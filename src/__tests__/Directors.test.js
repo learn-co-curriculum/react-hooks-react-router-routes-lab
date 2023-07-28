@@ -21,7 +21,7 @@ test("renders without any errors", () => {
 
 test("renders 'Directors Page' inside of a <h1 />", () => {
   render(<RouterProvider router={router}/>);
-  const h1 = screen.queryByText(/Directors Page/g);
+  const h1 = screen.queryByText(/Directors Page/);
   expect(h1).toBeInTheDocument();
   expect(h1.tagName).toBe("H1");
 });

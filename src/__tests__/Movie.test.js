@@ -23,14 +23,14 @@ test("renders without any errors", () => {
 
 test("renders movie's title in an h1", () => {
   render(<RouterProvider router={router} />);
-  const h1 = screen.queryByText(/Doctor Strange/g);
+  const h1 = screen.queryByText(/Doctor Strange/);
   expect(h1).toBeInTheDocument();
   expect(h1.tagName).toBe("H1");
 });
 
 test("renders movie's time within a p tag", () => {
   render(<RouterProvider router={router} />);
-  const p = screen.queryByText(/115/g);
+  const p = screen.queryByText(/115/);
   console.log(p.tagName)
   expect(p).toBeInTheDocument();
   expect(p.tagName).toBe("P");

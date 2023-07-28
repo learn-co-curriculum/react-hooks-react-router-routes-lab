@@ -31,7 +31,7 @@ test("renders a Home <NavLink>", async () => {
 });
 
 test("renders a Actors <NavLink>", async () => {
-  const a = screen.queryByText(/Actors/g);
+  const a = screen.queryByText(/Actors/);
 
   expect(a).toBeInTheDocument();
   expect(a.tagName).toBe("A");

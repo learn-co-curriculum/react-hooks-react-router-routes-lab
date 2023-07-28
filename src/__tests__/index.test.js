@@ -16,7 +16,7 @@ test('renders the Home component on route "/"', () => {
   render(
     <RouterProvider router={router}/>
 );
-  expect(screen.getByText(/Home Page/g)).toBeInTheDocument();
+  expect(screen.getByText(/Home Page/)).toBeInTheDocument();
 });
 
 test('renders the Actors component on route "/actors"', () => {
@@ -27,7 +27,7 @@ test('renders the Actors component on route "/actors"', () => {
   render(
     <RouterProvider router={router}/>
 );
-  expect(screen.getByText(/Actors Page/g)).toBeInTheDocument();
+  expect(screen.getByText(/Actors Page/)).toBeInTheDocument();
 });
 
 test('renders the Directors component on route "/directors"', () => {
@@ -38,7 +38,7 @@ test('renders the Directors component on route "/directors"', () => {
   render(
       <RouterProvider router={router}/>
   );
-  expect(screen.queryByText(/Directors Page/g)).toBeInTheDocument();
+  expect(screen.queryByText(/Directors Page/)).toBeInTheDocument();
 });
 
 test('renders the Movies component on route "/movie/:title"', () => {
@@ -50,7 +50,7 @@ test('renders the Movies component on route "/movie/:title"', () => {
   render(
     <RouterProvider router={router}/>
 );
-  expect(screen.queryByText(/Doctor Strange/g)).toBeInTheDocument();
+  expect(screen.queryByText(/Doctor Strange/)).toBeInTheDocument();
 });
 
 test("renders an error page when given a bad URL", () =>{
@@ -61,5 +61,5 @@ test("renders an error page when given a bad URL", () =>{
   render(
       <RouterProvider router={router} />
   )
-  expect(screen.getByText(/Oops! Looks like something went wrong./g)).toBeInTheDocument()
+  expect(screen.getByText(/Oops! Looks like something went wrong./)).toBeInTheDocument()
 })
