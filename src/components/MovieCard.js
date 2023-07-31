@@ -1,7 +1,6 @@
 import {Link} from 'react-router-dom'
 
 function MovieCard({title}) {
-  const genreList = genres.map(genre => <li key={genre}>{genre}</li>)
   
   return (
     <article>

@@ -1,4 +1,5 @@
 import { movies } from "../data";
+import MovieCard from "../components/MovieCard";
 
 function Home() {
 
@@ -8,7 +9,7 @@ function Home() {
         {/* What component should go here? */}
       </header>
       <main>
-        {/* Info goes here! */}
+        <h1>Home Page</h1>
       </main>
     </>
   );
