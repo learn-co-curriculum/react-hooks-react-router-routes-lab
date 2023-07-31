@@ -60,15 +60,23 @@ This file contains seed data for **Actors**, **Movies**, and **Directors**.
 ### NavBar
 
 This component needs to render three `NavLink` components. They will be for `/`,
-`/directors`, and `/actors`, in this order (test checks for this). Each page should
-render the NavBar.
+`/directors`, and `/actors`, in this order (test checks for this). Each page
+should render the NavBar.
 
 ### MovieCard
 
-This component is already set up to render data about one movie. You'll need to
-pass it the appropriate props to render a movie. You'll also need to use a
-`Link` component from `react-router-dom` that uses dynamic routing to link a
-user to the `Movie` page, using the movie title as a parameter.
+This component is already set up to render the title of one movie. You'll need
+to pass it the appropriate props to render a movie's title. You'll also need to
+use a `Link` component from `react-router-dom` that uses dynamic routing to link
+a user to the `Movie` page, using the movie title as a parameter.
+
+> **Note**: The titles of the movies contain empty spaces, which are translated
+> into `%20` when injected into the URL of a webpage. This is known as `URL
+> Encoding`. URL Encoding takes characters that are not valid URL characters and
+> translates them into a valid character couterpart. All empty spaces are
+> encoded to `%20`, for example. `react-router-dom` takes care of encoding our
+> URLs for us, and de-encoding them when we try to access URL paramteres via
+> `useParams`. Pretty cool!
 
 ## Pages
 
