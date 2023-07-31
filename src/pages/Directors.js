@@ -2,7 +2,7 @@ import { directors } from "../data";
 import Card from "../components/Card";
 
 function Directors() {
-  const directorList = directors.map(director => <Card key={director.name} name={director.name} list={director.movies}/>)
+  const directorList = directors.map(director => <Card key={director.name} name={director.name} movies={director.movies}/>)
   
   return (
     <>
@@ -11,6 +11,7 @@ function Directors() {
       </header>
       <main>
         <h1>Directors Page</h1>
+        {directorList}
       </main>
     </>
   );
