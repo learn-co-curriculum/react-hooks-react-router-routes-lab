@@ -75,7 +75,7 @@ a user to the `Movie` page, using the movie title as a parameter.
 > Encoding`. URL Encoding takes characters that are not valid URL characters and
 > translates them into a valid character couterpart. All empty spaces are
 > encoded to `%20`, for example. `react-router-dom` takes care of encoding our
-> URLs for us, and de-encoding them when we try to access URL paramteres via
+> URLs for us, and de-encoding them when we access URL parameters via
 > `useParams`. Pretty cool!
 
 ## Pages
@@ -92,8 +92,8 @@ This component should render on the `/movie` route. You will need to include a
 URL parameter of `title` on that route.
 
 The component will display information about one specific movie. It should
-display the movie's title in an `<h1>` tag, the movie's time with a `p` tag, and
-each movie genre within its own `span` tag.
+display the movie's title in an `<h1>` tag, the movie's time in a `p` tag, and
+each of the movie's genres within its own `span` tag.
 
 You'll need to use the `useParams` hook to get URL parameter data about which
 movie you want to render, then use that data to render the appropriate movie.
