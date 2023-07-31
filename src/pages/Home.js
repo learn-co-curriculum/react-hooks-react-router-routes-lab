@@ -4,7 +4,7 @@ import NavBar from "../components/NavBar"
 
 
 function Home() {
-  // const movieList = movies.map(movie => <MovieCard key={movie.title} title={movie.title} />)
+  const movieList = movies.map(movie => <MovieCard key={movie.title} title={movie.title} />)
 
   return (
     <>
@@ -13,7 +13,7 @@ function Home() {
       </header>
       <main>
         <h1>Home Page</h1>
-        {/* {movieList} */}
+        {movieList}
       </main>
     </>
   );

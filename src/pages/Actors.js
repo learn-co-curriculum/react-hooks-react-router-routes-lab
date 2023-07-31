@@ -1,5 +1,6 @@
 import { actors } from "../data";
 import Card from "../components/Card";
+import NavBar from "../components/NavBar";
 
 
 function Actors() {
@@ -8,7 +9,7 @@ function Actors() {
   return (
     <>
       <header>
-        {/* What component should go here? */}
+        <NavBar />
       </header>
       <main>
         <h1>Actors Page</h1>
