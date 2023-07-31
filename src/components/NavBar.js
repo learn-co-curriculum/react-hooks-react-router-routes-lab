@@ -1,9 +1,11 @@
 import { NavLink } from "react-router-dom";
 
 function NavBar() {
-  return <nav className="navbar">
+  return (
+    <nav className="navbar">
     
-    </nav>;
+    </nav>
+    );
 }
 
 export default NavBar;
