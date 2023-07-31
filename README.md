@@ -60,8 +60,9 @@ This file contains seed data for **Actors**, **Movies**, and **Directors**.
 ### NavBar
 
 This component needs to render three `NavLink` components. They will be for `/`,
-`/directors`, and `/actors`, in this order (test checks for this). Each page
-should render the NavBar.
+`/directors`, and `/actors`, in this order (test checks for this). The `NavLink`
+for `/` should render `Home`, `directors` should render `Directors`, and
+`actors` should render `Actors`. Each page should render the NavBar.
 
 ### MovieCard
 

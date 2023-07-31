@@ -1,5 +1,6 @@
 import Home from "./pages/Home";
-import Movie from "./pages/Movie"
+import Movie from "./pages/Movie";
+import Directors from "./pages/Directors";
 
 const routes = [
     {
@@ -7,8 +8,12 @@ const routes = [
       element: <Home />
     },
     {
-      path: "/movie",
+      path: "/movie/:title",
       element: <Movie />
+    },
+    {
+      path: "/directors",
+      element: <Directors />
     }
   ]
 
