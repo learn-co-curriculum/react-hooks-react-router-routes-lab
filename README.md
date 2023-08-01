@@ -124,6 +124,10 @@ You'll need to create a new component within the `pages` folder for our
 `ErrorPage`. This page should display our `NavBar` component, along with the
 text `Oops! Looks like something went wrong.` in an `h1`.
 
+> Note: Even when all of your tests are passing, you will see a `console.warn`
+> message indicating that the route the test file is using - `bad-route` -
+> doesn't match any routes.
+
 ## Resources
 
 - [React Router](https://v5.reactrouter.com/web/guides/quick-start)
