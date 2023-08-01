@@ -42,3 +42,13 @@ test("renders a span for each genre", () => {
     expect(span.tagName).toBe("SPAN");
   })
 });
+
+test("renders the <NavBar /> component", () => {
+  const router = createMemoryRouter(routes, {
+    initialEntries: [`/movie/Doctor%20Strange`]
+  })
+  render(
+      <RouterProvider router={router}/>
+  );
+  expect(document.querySelector(".navbar")).toBeInTheDocument();
+});
