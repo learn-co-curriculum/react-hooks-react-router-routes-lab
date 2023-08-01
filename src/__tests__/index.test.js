@@ -1,15 +1,9 @@
 import "@testing-library/jest-dom";
-import { RouterProvider, createMemoryRouter} from "react-router-dom"
+import { RouterProvider, createMemoryRouter, MemoryRouter} from "react-router-dom"
 import { render, screen } from "@testing-library/react";
 import routes from "../routes.js";
 
-test("renders the <NavBar /> component", () => {
-  const router = createMemoryRouter(routes)
-  render(
-      <RouterProvider router={router}/>
-  );
-  expect(document.querySelector(".navbar")).toBeInTheDocument();
-});
+
 
 test('renders the Home component on route "/"', () => {
   const router = createMemoryRouter(routes)
@@ -21,8 +15,7 @@ test('renders the Home component on route "/"', () => {
 
 test('renders the Actors component on route "/actors"', () => {
     const router = createMemoryRouter(routes, {
-        initialEntries: ['/actors'],
-        initialIndex: 0
+        initialEntries: ['/actors']
     })
   render(
     <RouterProvider router={router}/>
@@ -32,8 +25,7 @@ test('renders the Actors component on route "/actors"', () => {
 
 test('renders the Directors component on route "/directors"', () => {
     const router = createMemoryRouter(routes, {
-        initialEntries: ['/directors'],
-        initialIndex: 0
+        initialEntries: ['/directors']
     })
   render(
       <RouterProvider router={router}/>
@@ -44,8 +36,7 @@ test('renders the Directors component on route "/directors"', () => {
 test('renders the Movies component on route "/movie/:title"', () => {
     const title = "Doctor Strange"
     const router = createMemoryRouter(routes, {
-        initialEntries: [`/movie/${title}`],
-        initialIndex: 0
+        initialEntries: [`/movie/${title}`]
     })
   render(
     <RouterProvider router={router}/>
@@ -55,8 +46,7 @@ test('renders the Movies component on route "/movie/:title"', () => {
 
 test("renders an error page when given a bad URL", () =>{
   const router = createMemoryRouter(routes, {
-      initialEntries: ["/bad-route"],
-      initialIndex: 0
+      initialEntries: ["/bad-route"]
   })
   render(
       <RouterProvider router={router} />

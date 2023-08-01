@@ -45,3 +45,13 @@ test("renders a <li /> for each movie", () => {
     }
   }
 });
+
+test("renders the <NavBar /> component", () => {
+  const router = createMemoryRouter(routes, {
+    initialEntries: ['/actors']
+  })
+  render(
+      <RouterProvider router={router}/>
+  );
+  expect(document.querySelector(".navbar")).toBeInTheDocument();
+});
