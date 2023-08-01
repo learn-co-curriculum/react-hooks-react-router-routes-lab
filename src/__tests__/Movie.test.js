@@ -2,8 +2,6 @@ import "@testing-library/jest-dom";
 import { RouterProvider, createMemoryRouter} from "react-router-dom"
 import { render, screen } from "@testing-library/react";
 import routes from "../routes";
-import Movie from "../pages/Movie";
-import { movies } from "../data";
 
 const title = "Doctor Strange"
 const router = createMemoryRouter(routes, {
@@ -31,7 +29,6 @@ test("renders movie's title in an h1", () => {
 test("renders movie's time within a p tag", () => {
   render(<RouterProvider router={router} />);
   const p = screen.queryByText(/115/);
-  console.log(p.tagName)
   expect(p).toBeInTheDocument();
   expect(p.tagName).toBe("P");
 });

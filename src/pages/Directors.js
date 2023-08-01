@@ -8,7 +8,7 @@ function Directors() {
   return (
     <>
       <header>
-        <NavBar />
+        {/* <NavBar /> */}
       </header>
       <main>
         <h1>Directors Page</h1>
