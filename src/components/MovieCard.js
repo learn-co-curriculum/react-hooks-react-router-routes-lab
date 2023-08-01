@@ -1,6 +1,7 @@
 import {Link} from 'react-router-dom'
 
 function MovieCard({title}) {
+
   
   return (
     <article>
