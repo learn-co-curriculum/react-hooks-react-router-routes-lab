@@ -1,8 +1,8 @@
-import React from "react";
-import { actors } from "../data";
+import React from 'react';
 
-function Actors() {
-  return <div>{/*{code here}*/}</div>;
-}
+const Actors = () => {
+  return <div>Actors Page</div>;
+};
 
 export default Actors;
+

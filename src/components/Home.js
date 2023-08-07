@@ -1,7 +1,8 @@
-import React from "react";
+import React from 'react';
 
-function Home() {
-  return <div>{/*{code here}*/}</div>;
-}
+const Home = () => {
+  return <div>Welcome to the Movie App! Explore movies, actors, and directors.</div>;
+};
 
 export default Home;
+

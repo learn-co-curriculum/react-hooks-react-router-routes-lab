@@ -1,98 +1,68 @@
-# Basic Routes Lab
+# Movie Application
 
-## Learning Goals
+This is a simple Movie Application that provides information about movies, actors, and directors. The application includes routes for a Home Page, Actors Page, Movies Page, and Directors Page.
 
-- Use the `<Route>` component to display different components based on the URL
-- Use the `<NavBar>` component to allow client-side navigation
+## Features
 
-## Introduction
+- View a list of movies, actors, and directors.
+- Navigate between different pages using the navigation bar.
+- Access detailed information about movies, including title, duration, and genres.
+- Explore actors' filmography and their associated movies.
+- Learn about directors and their directed movies.
 
-In this lab we are going to build out a Movie application that has routes for a
-Home Page, Actors Page, Movies Page and Directors Page. Our goal is to provide
-routes and links for these 4 pages.
+## Installation
 
-Here is what each page of our app should look like when we are done with this lab:
+1. Clone the repository to your local machine:
 
-- [Home Page](https://s3.amazonaws.com/learn-verified/react-router-lab-home-page.png)
-- [Movies Page](https://s3.amazonaws.com/learn-verified/react-router-lab-movies-page.png)
-- [Directors Page](https://s3.amazonaws.com/learn-verified/react-router-lab-directors-page.png)
-- [Actors Page](https://s3.amazonaws.com/learn-verified/react-router-lab-actors-page.png)
+git clone https://github.com/your-username/movie-application.git
 
-Let's work through this one component at a time.
+css
+Copy code
 
-## Setup
+2. Navigate to the project directory:
 
-Our `src` folder contains the following:
+cd movie-application
 
-```txt
-src/
-├── data.js
-├── index.js
-└── components/
-    ├── App.js
-    ├── Actors.js
-    ├── Directors.js
-    ├── Home.js
-    ├── Movies.js
-    └── NavBar.js
-```
+arduino
+Copy code
 
-All of the file and module imports are done for you, so you just need to focus
-on the JSX for these components.
+3. Install the dependencies using your preferred package manager:
 
-### index.js
+npm install
 
-Our `index.js` file is completed for us. It loads the `BrowserRouter` component
-from React Router, as well as `App` as the top level component.
+markdown
+Copy code
 
-### data.js
+4. Start the development server:
 
-This file contains seed data for **Actors**, **Movies**, and **Directors**.
+npm start
 
-## Components
+less
+Copy code
 
-### App
+5. Open your web browser and navigate to `http://localhost:3000` to view the application.
 
-Inside this component, we'll need to render our `NavBar` and four **React
-Router** `Route` components with the following paths:
+## Usage
 
-- `/movies`: should render the `Movies` component
-- `/directors`: should render the `Directors` component
-- `/actors`: should render the `Actors` component
-- `/`: should render the `Home` component
+- Click on the navigation links to explore different sections of the application.
+- Browse through movies, actors, and directors.
+- Click on specific items to view more details.
 
-### NavBar
+## Technologies Used
 
-This component needs to render four `NavLink` components. They will be for `/`,
-`/movies`, `/directors`, `/actors`, in this order (test checks for this).
+- React
+- React Router
+- HTML
+- CSS
 
-### Home
+## Contributing
 
-This component should render the text `Home Page` in an `<h1>`.
+Contributions are welcome! If you find any issues or want to enhance the application, feel free to open a pull request.
 
-### Movies
+## License
 
-This component should render the text `Movies Page` in an `<h1>`, and make a new
-`<div>` for each movie. The `<div>` should contain the movie's title, time and a
-`<ul>` with a list of its genres, each within their own `<li>`.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-### Directors
+## Contact
 
-This component should render the text `Directors Page` in an `<h1>`, and make a
-new `<div>` for each director. The `<div>` should contain the director's name
-and a `<ul>` with a list of their movies.
-
-### Actors
-
-This component should render the text `Actors Page` in an `<h1>`, and make a new
-`<div>` for each actor. The `<div>` should contain the actor's name and a `<ul>`
-with a list of their movies.
-
-> Note: The tests will count how many `<div>`s are nested inside your `Movies`,
-> `Directors`, and `Actors` components. So to get tests to pass, you must create
-> _exactly one_ `<div>` for each movie, director, or actor, and no additional
-> nested `<div>`s in those components.
-
-## Resources
-
-- [React Router](https://v5.reactrouter.com/web/guides/quick-start)
+For any questions or inquiries, please contact [Stephan Maina](popsmokedriller092@gmail.com).

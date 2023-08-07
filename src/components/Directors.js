@@ -1,8 +1,7 @@
-import React from "react";
-import { directors } from "../data";
+import React from 'react';
 
-function Directors() {
-  return <div>{/*{code here}*/}</div>;
-}
+const Directors = () => {
+  return <div>Directors Page</div>;
+};
 
 export default Directors;

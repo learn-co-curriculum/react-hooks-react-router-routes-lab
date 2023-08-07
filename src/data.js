@@ -22,6 +22,10 @@ const actors = [
     movies: ["Doctor Strange", "The Imitation Game", "Black Mass"],
   },
   {
+    name: "Chris Evans",
+    movies: ["Avengers: Endgame", "Captain America: The Winter Soldier", "Knives Out"],
+  },
+  {
     name: "Justin Timberlake",
     movies: ["Trolls", "Friends with Benefits", "The Social Network"],
   },
@@ -30,12 +34,24 @@ const actors = [
     movies: ["Pitch Perfect", "Into The Wood"],
   },
   {
+    name: "Chris Hemsworth",
+    movies: ["Thor: Ragnarok", "The Avengers", "Snow White and the Huntsman"],
+  },
+  {
+    name: "Cillian Murphy",
+    movies: ["Inception", "The Dark Knight", "Peaky Blinders"],
+  },
+  {
     name: "Tom Cruise",
     movies: [
       "Jack Reacher: Never Go Back",
       "Mission Impossible 4",
       "War of the Worlds",
     ],
+  },
+  {
+    name: "Jenna Ortega",
+    movies: ["The Babysitter: Killer Queen", "You", "Iron Man"],
   },
 ];
 
@@ -50,7 +66,7 @@ const directors = [
   },
   {
     name: "Edward Zwick",
-    movies: ["Jack Reacher: Never Go Back", "Blood Diamon", "The Siege"],
+    movies: ["Jack Reacher: Never Go Back", "Blood Diamond", "The Siege"],
   },
 ];
 
