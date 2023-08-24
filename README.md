@@ -25,8 +25,8 @@ src/
 ├── index.js
 ├── routes.js
 ├── components/
-    ├── NavBar.js
     ├── MovieCard.js
+    ├── NavBar.js
 └── pages/
     ├── Actors.js
     ├── Directors.js
@@ -93,8 +93,8 @@ This component should render on the `/movie` route. You will need to include a
 URL parameter of `title` on that route.
 
 The component will display information about one specific movie. It should
-display the movie's title in an `<h1>` tag, the movie's time in a `p` tag, and
-each of the movie's genres within its own `span` tag.
+display the movie's title in an `<h1>` tag, the movie's time in a `<p>` tag, and
+each of the movie's genres within its own `<span>` tag.
 
 You'll need to use the `useParams` hook to get URL parameter data about which
 movie you want to render, then use that data to render the appropriate movie.
@@ -114,7 +114,7 @@ should contain the actor's name in an `<h2>` and a `<ul>` with a list of their
 movies.
 
 > Note: The tests will count how many `<article>`s are nested inside your
-> `Directors`, and `Actors` components. So to get tests to pass, you must create
+> `Directors` and `Actors` components. So to get tests to pass, you must create
 > _exactly one_ `<article>` for each director or actor, and no additional nested
 > `<article>`s in those components.
 
@@ -122,10 +122,10 @@ movies.
 
 You'll need to create a new component within the `pages` folder for our
 `ErrorPage`. This page should display our `NavBar` component, along with the
-text `Oops! Looks like something went wrong.` in an `h1`.
+text "Oops! Looks like something went wrong." in an `<h1>`.
 
 > Note: Even when all of your tests are passing, you will see a `console.warn`
-> message indicating that the route the test file is using - `bad-route` -
+> message indicating that the route the test file is using — `bad-route` —
 > doesn't match any routes.
 
 ## Resources
