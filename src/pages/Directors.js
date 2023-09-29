@@ -12,6 +12,6 @@ function Directors() {
       </main>
     </>
   );
-}
+};
 
 export default Directors;

@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
 function MovieCard({title}) {
   
@@ -7,7 +7,7 @@ function MovieCard({title}) {
         <h2>{title}</h2>
         {/* What should go here? */}
     </article>
-  )
-}
+  );
+};
 
-export default MovieCard
+export default MovieCard;

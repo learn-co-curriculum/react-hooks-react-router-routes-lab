@@ -2,10 +2,10 @@
 
 ## Learning Goals
 
-- Use `createBrowserRouter` to create a client-side router
-- Use `RouterProvider` to include the router in your app
-- Use the `<NavBar>` component to allow client-side navigation
-- Use `errorElement` to set up router error handling
+- Use `createBrowserRouter` to create a client-side router.
+- Use `RouterProvider` to include the router in your app.
+- Use the `<NavBar>` component to allow client-side navigation.
+- Use `errorElement` to set up router error handling.
 
 ## Introduction
 

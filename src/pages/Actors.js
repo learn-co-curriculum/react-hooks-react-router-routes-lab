@@ -12,6 +12,6 @@ function Actors() {
       </main>
     </>
   );
-}
+};
 
 export default Actors;
