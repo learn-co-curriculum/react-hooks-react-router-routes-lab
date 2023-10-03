@@ -1,13 +1,18 @@
 import "@testing-library/jest-dom";
-import React from "react";
 import { render, screen } from "@testing-library/react";
-import Actors from "../components/Actors";
+import { RouterProvider, createMemoryRouter} from "react-router-dom";
+import routes from "../routes";
 import { actors } from "../data";
+
+const router = createMemoryRouter(routes, {
+  initialEntries: [`/actors`],
+  initialIndex: 0
+})
 
 test("renders without any errors", () => {
   const errorSpy = jest.spyOn(global.console, "error");
 
-  render(<Actors />);
+  render(<RouterProvider router={router}/>);
 
   expect(errorSpy).not.toHaveBeenCalled();
 
@@ -15,14 +20,14 @@ test("renders without any errors", () => {
 });
 
 test("renders 'Actors Page' inside of the <h1 />", () => {
-  render(<Actors />);
-  const h1 = screen.queryByText(/Actors Page/g);
+  render(<RouterProvider router={router}/>);
+  const h1 = screen.queryByText(/Actors Page/);
   expect(h1).toBeInTheDocument();
   expect(h1.tagName).toBe("H1");
 });
 
 test("renders each actor's name", () => {
-  render(<Actors />);
+  render(<RouterProvider router={router}/>);
   for (const actor of actors) {
     expect(
       screen.queryByText(actor.name, { exact: false })
@@ -31,7 +36,7 @@ test("renders each actor's name", () => {
 });
 
 test("renders a <li /> for each movie", () => {
-  render(<Actors />);
+  render(<RouterProvider router={router}/>);
   for (const actor of actors) {
     for (const movie of actor.movies) {
       const li = screen.queryByText(movie, { exact: false });
@@ -39,4 +44,14 @@ test("renders a <li /> for each movie", () => {
       expect(li.tagName).toBe("LI");
     }
   }
+});
+
+test("renders the <NavBar /> component", () => {
+  const router = createMemoryRouter(routes, {
+    initialEntries: ['/actors']
+  })
+  render(
+      <RouterProvider router={router}/>
+  );
+  expect(document.querySelector(".navbar")).toBeInTheDocument();
 });
