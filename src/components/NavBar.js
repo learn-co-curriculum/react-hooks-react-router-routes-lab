@@ -1,8 +1,12 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
+import "./NavBar.css";
 
 function NavBar() {
-  return <div>{/*{code here}*/}</div>;
-}
+  return (
+    <nav className="navbar">
+    
+    </nav>
+    );
+};
 
 export default NavBar;

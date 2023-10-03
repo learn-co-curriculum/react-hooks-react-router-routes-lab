@@ -1,0 +1,12 @@
+span {
+    margin: 0px 2px;
+}
+
+article {
+    border: solid 1px;
+    border-radius: 5px;
+    margin: 5px;
+    max-width: 350px;
+    box-sizing: border-box;
+    padding: 5px;
+}

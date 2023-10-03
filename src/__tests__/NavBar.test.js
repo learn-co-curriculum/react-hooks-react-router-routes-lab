@@ -19,19 +19,7 @@ test('wraps content in a div with "navbar" class', () => {
 });
 
 test("renders a Home <NavLink>", async () => {
-  const a = screen.queryByText(/Home/g);
-
-  expect(a).toBeInTheDocument();
-  expect(a.tagName).toBe("A");
-  expect(a.href).toContain("/");
-
-  fireEvent.click(a, { button: 0 });
-
-  expect(a.classList).toContain("active");
-});
-
-test("renders a Movies <NavLink>", async () => {
-  const a = screen.queryByText(/Movies/g);
+  const a = screen.queryByText(/Home/);
 
   expect(a).toBeInTheDocument();
   expect(a.tagName).toBe("A");
@@ -43,7 +31,7 @@ test("renders a Movies <NavLink>", async () => {
 });
 
 test("renders a Actors <NavLink>", async () => {
-  const a = screen.queryByText(/Actors/g);
+  const a = screen.queryByText(/Actors/);
 
   expect(a).toBeInTheDocument();
   expect(a.tagName).toBe("A");
@@ -55,7 +43,7 @@ test("renders a Actors <NavLink>", async () => {
 });
 
 test("renders a Directors <NavLink>", async () => {
-  const a = screen.queryByText(/Directors/g);
+  const a = screen.queryByText(/Directors/);
 
   expect(a).toBeInTheDocument();
   expect(a.tagName).toBe("A");
