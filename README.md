@@ -47,7 +47,7 @@ the browser.
 You'll be adding the routes you create to this file and saving them within the
 `routes` variable. You'll need to provide routes for `/`, `/directors`,
 `/actors`, and `/movie`. The `/movie` route should also include a URL parameter
-called `title`. Don't forget that you'll need to import components into this
+called `id`. Don't forget that you'll need to import components into this
 file!
 
 ### index.js
@@ -70,15 +70,7 @@ for `/` should render `Home`, `directors` should render `Directors`, and
 This component is already set up to render the title of one movie. You'll need
 to pass it the appropriate props to render a movie's title. You'll also need to
 use a `Link` component from `react-router-dom` that uses dynamic routing to link
-a user to the `Movie` page, using the movie title as a parameter.
-
-> **Note**: The titles of the movies contain empty spaces, which are translated
-> into `%20` when injected into the URL of a webpage. This is known as `URL
-> Encoding`. URL Encoding takes characters that are not valid URL characters and
-> translates them into a valid character couterpart. All empty spaces are
-> encoded to `%20`, for example. `react-router-dom` takes care of encoding our
-> URLs for us, and de-encoding them when we access URL parameters via
-> `useParams`. Pretty cool!
+a user to the `Movie` page, using the movie id as a parameter.
 
 ## Pages
 
@@ -91,7 +83,7 @@ components.
 ### Movie
 
 This component should render on the `/movie` route. You will need to include a
-URL parameter of `title` on that route.
+URL parameter of `id` on that route.
 
 The component will display information about one specific movie. It should
 display the movie's title in an `<h1>` tag, the movie's time in a `<p>` tag, and
