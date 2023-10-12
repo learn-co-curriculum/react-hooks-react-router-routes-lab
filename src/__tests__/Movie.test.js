@@ -3,9 +3,9 @@ import { RouterProvider, createMemoryRouter} from "react-router-dom"
 import { render, screen } from "@testing-library/react";
 import routes from "../routes";
 
-const title = "Doctor Strange"
+const id = 1
 const router = createMemoryRouter(routes, {
-    initialEntries: [`/movie/${title}`],
+    initialEntries: [`/movie/${id}`],
     initialIndex: 0
 })
 
@@ -19,36 +19,36 @@ test("renders without any errors", () => {
   errorSpy.mockRestore();
 });
 
-test("renders movie's title in an h1", () => {
+test("renders movie's title in an h1", async () => {
   render(<RouterProvider router={router} />);
-  const h1 = screen.queryByText(/Doctor Strange/);
+  const h1 = await screen.findByText(/Doctor Strange/);
   expect(h1).toBeInTheDocument();
   expect(h1.tagName).toBe("H1");
 });
 
-test("renders movie's time within a p tag", () => {
+test("renders movie's time within a p tag", async () => {
   render(<RouterProvider router={router} />);
-  const p = screen.queryByText(/115/);
+  const p = await screen.findByText(/115/);
   expect(p).toBeInTheDocument();
   expect(p.tagName).toBe("P");
 });
 
-test("renders a span for each genre", () => {
+test("renders a span for each genre",  () => {
   render(<RouterProvider router={router} />);
   const genres = ["Action", "Adventure", "Fantasy"];
-  genres.forEach(genre =>{
-    const span = screen.queryByText(genre);
+  genres.forEach(async (genre) =>{
+    const span = await screen.findByText(genre);
     expect(span).toBeInTheDocument();
     expect(span.tagName).toBe("SPAN");
   })
 });
 
-test("renders the <NavBar /> component", () => {
+test("renders the <NavBar /> component", async () => {
   const router = createMemoryRouter(routes, {
-    initialEntries: [`/movie/Doctor%20Strange`]
+    initialEntries: [`/movie/1`]
   })
   render(
       <RouterProvider router={router}/>
   );
-  expect(document.querySelector(".navbar")).toBeInTheDocument();
+  expect(await screen.findByRole("navigation")).toBeInTheDocument();
 });

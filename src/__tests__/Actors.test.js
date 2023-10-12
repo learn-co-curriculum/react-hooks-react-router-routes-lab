@@ -26,20 +26,20 @@ test("renders 'Actors Page' inside of the <h1 />", () => {
   expect(h1.tagName).toBe("H1");
 });
 
-test("renders each actor's name", () => {
+test("renders each actor's name", async () => {
   render(<RouterProvider router={router}/>);
   for (const actor of actors) {
     expect(
-      screen.queryByText(actor.name, { exact: false })
+      await screen.findByText(actor.name, { exact: false })
     ).toBeInTheDocument();
   }
 });
 
-test("renders a <li /> for each movie", () => {
+test("renders a <li /> for each movie", async () => {
   render(<RouterProvider router={router}/>);
   for (const actor of actors) {
     for (const movie of actor.movies) {
-      const li = screen.queryByText(movie, { exact: false });
+      const li = await screen.findByText(movie, { exact: false });
       expect(li).toBeInTheDocument();
       expect(li.tagName).toBe("LI");
     }

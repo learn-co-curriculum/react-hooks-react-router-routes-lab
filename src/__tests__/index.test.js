@@ -33,15 +33,15 @@ test('renders the Directors component on route "/directors"', () => {
   expect(screen.queryByText(/Directors Page/)).toBeInTheDocument();
 });
 
-test('renders the Movies component on route "/movie/:title"', () => {
-    const title = "Doctor Strange"
+test('renders the Movie component on route "/movie/:id"', async () => {
+    const id = 1
     const router = createMemoryRouter(routes, {
-        initialEntries: [`/movie/${title}`]
+        initialEntries: [`/movie/${id}`]
     })
   render(
     <RouterProvider router={router}/>
 );
-  expect(screen.queryByText(/Doctor Strange/)).toBeInTheDocument();
+  expect(await screen.findByText(/Doctor Strange/)).toBeInTheDocument();
 });
 
 test("renders an error page when given a bad URL", () =>{
