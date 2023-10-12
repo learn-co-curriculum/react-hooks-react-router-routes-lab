@@ -12,7 +12,7 @@ useEffect(() =>{
   .catch(error => console.error(error))
 }, [])
 
-const movieList = movies.map(movie => <MovieCard key={movie.id} title={movie.title} />)
+const movieList = movies.map(movie => <MovieCard key={movie.id} title={movie.title} id={movie.id}/>)
 
   return (
     <>
