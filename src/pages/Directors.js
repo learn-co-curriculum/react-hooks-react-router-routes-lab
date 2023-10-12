@@ -1,7 +1,6 @@
-import { directors } from "../data";
+import { useEffect, useState } from "react";
 
 function Directors() {
-  
   return (
     <>
       <header>

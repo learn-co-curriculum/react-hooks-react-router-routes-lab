@@ -1,4 +1,4 @@
-import { movies } from "../data";
+import { useEffect, useState } from "react";
 
 function Movie() {
   return (

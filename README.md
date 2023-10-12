@@ -21,21 +21,26 @@ Our `src` folder contains the following JavaScript files:
 
 ```txt
 src/
-├── data.js
-├── index.js
-├── routes.js
 ├── components/
     ├── MovieCard.js
     ├── NavBar.js
+    ├── NavBar.css
 └── pages/
     ├── Actors.js
     ├── Directors.js
     ├── Home.js
     ├── Movie.js
+├── index.css
+├── index.js
+├── routes.js
 ```
 
 You'll need to fill out these various files to get your app up and running.
 You're free to make new components when you feel that doing so is warranted.
+
+To start up the lab, first run `npm install`, as per usual. Then run `npm run
+server` to start your `json-server` and `npm start` to open the application in
+the browser.
 
 ### routes.js
 
@@ -50,10 +55,6 @@ file!
 Our `index.js` file is currently broken. (It's not rendering anything!) You'll
 need to update it to provide routing to our application using
 `createBrowserRouter` and `RouterProvider`.
-
-### data.js
-
-This file contains seed data for **Actors**, **Movies**, and **Directors**.
 
 ## Components
 
@@ -97,7 +98,8 @@ display the movie's title in an `<h1>` tag, the movie's time in a `<p>` tag, and
 each of the movie's genres within its own `<span>` tag.
 
 You'll need to use the `useParams` hook to get URL parameter data about which
-movie you want to render, then use that data to render the appropriate movie.
+movie you want to render, then use that data to fetch and render the appropriate
+movie.
 
 ### Directors
 

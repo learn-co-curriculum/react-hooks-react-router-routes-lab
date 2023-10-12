@@ -1,5 +1,4 @@
-import { actors } from "../data";
-
+import { useEffect, useState } from "react";
 
 function Actors() {
   return (
