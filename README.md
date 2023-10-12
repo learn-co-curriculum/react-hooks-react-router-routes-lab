@@ -47,7 +47,7 @@ the browser.
 You'll be adding the routes you create to this file and saving them within the
 `routes` variable. You'll need to provide routes for `/`, `/directors`,
 `/actors`, and `/movie`. The `/movie` route should also include a URL parameter
-called `title`. Don't forget that you'll need to import components into this
+called `id`. Don't forget that you'll need to import components into this
 file!
 
 ### index.js
