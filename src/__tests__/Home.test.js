@@ -24,7 +24,7 @@ test("Displays links for each associated movie", async () =>{
   render(<RouterProvider router={router}/>);
   const linkList = await screen.findAllByText(/View Info/);
   expect(linkList.length).toBeGreaterThan(2);
-  expect(linkList[0].href).toBe("http://localhost/movie/Doctor%20Strange");
+  expect(linkList[0].href).toBe("http://localhost/movie/1");
 })
 
 test("renders the <NavBar /> component", () => {
