@@ -36,7 +36,9 @@ src/
 ```
 
 You'll need to fill out these various files to get your app up and running.
-You're free to make new components when you feel that doing so is warranted.
+You're also free to make your own new components when you feel its warranted!
+(Look out for repetitive code, or code that seems like it deserves its own new
+component.)
 
 To start up the lab, first run `npm install`, as per usual. Then run `npm run
 server` to start your `json-server` and `npm start` to open the application in
@@ -47,8 +49,7 @@ the browser.
 You'll be adding the routes you create to this file and saving them within the
 `routes` variable. You'll need to provide routes for `/`, `/directors`,
 `/actors`, and `/movie`. The `/movie` route should also include a URL parameter
-called `id`. Don't forget that you'll need to import components into this
-file!
+called `id`. Don't forget that you'll need to import components into this file!
 
 ### index.js
 
