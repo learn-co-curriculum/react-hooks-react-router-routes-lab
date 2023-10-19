@@ -2,7 +2,29 @@ import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import { RouterProvider, createMemoryRouter} from "react-router-dom";
 import routes from "../routes";
-import { actors } from "../data";
+
+const actors = [
+  {
+    name: "Benedict Cumberbatch",
+    movies: ["Doctor Strange", "The Imitation Game", "Black Mass"],
+  },
+  {
+    name: "Justin Timberlake",
+    movies: ["Trolls", "Friends with Benefits", "The Social Network"],
+  },
+  {
+    name: "Anna Kendrick",
+    movies: ["Pitch Perfect", "Into The Wood"],
+  },
+  {
+    name: "Tom Cruise",
+    movies: [
+      "Jack Reacher: Never Go Back",
+      "Mission Impossible 4",
+      "War of the Worlds",
+    ],
+  },
+];
 
 const router = createMemoryRouter(routes, {
   initialEntries: [`/actors`],
@@ -26,20 +48,20 @@ test("renders 'Actors Page' inside of the <h1 />", () => {
   expect(h1.tagName).toBe("H1");
 });
 
-test("renders each actor's name", () => {
+test("renders each actor's name", async () => {
   render(<RouterProvider router={router}/>);
   for (const actor of actors) {
     expect(
-      screen.queryByText(actor.name, { exact: false })
+      await screen.findByText(actor.name, { exact: false })
     ).toBeInTheDocument();
   }
 });
 
-test("renders a <li /> for each movie", () => {
+test("renders a <li /> for each movie", async () => {
   render(<RouterProvider router={router}/>);
   for (const actor of actors) {
     for (const movie of actor.movies) {
-      const li = screen.queryByText(movie, { exact: false });
+      const li = await screen.findByText(movie, { exact: false });
       expect(li).toBeInTheDocument();
       expect(li.tagName).toBe("LI");
     }
